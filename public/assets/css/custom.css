@@ -1,0 +1,7 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    position: relative;
+    z-index: 2;
+}
