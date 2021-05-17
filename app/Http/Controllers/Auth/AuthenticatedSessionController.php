@@ -37,12 +37,12 @@ class AuthenticatedSessionController extends Controller
             $redirect_to = '/panel/admin';
             return redirect($redirect_to);
         }
-        elseif(Auth::user()->hasRole(['finance'])){
-            $redirect_to = '/panel/finance';
+        elseif(Auth::user()->hasRole(['teacher'])){
+            $redirect_to = '/panel/teacher';
             return redirect($redirect_to);
         }
-        elseif(Auth::user()->hasRole(['subscriber'])){
-            $redirect_to = '/panel';
+        elseif(Auth::user()->hasRole(['student'])){
+            $redirect_to = '/panel/student';
             return redirect($redirect_to);
         }
         else{

@@ -15,7 +15,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../../../">
 		<meta charset="utf-8" />
-		<title>Jujiedso Fibr Optics - Panel</title>
+		<title>ANHS | Student Online Attendance</title>
 		<meta name="description" content="Login page example" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
@@ -36,7 +36,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{asset('assets/css/themes/layout/brand/dark.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="{{asset('assets/media/jujiedso_ico.jpeg')}}" />
+		<link rel="shortcut icon" href="{{asset('assets/media/anhs-logo.png')}}" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -52,7 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Aside body-->
 						<div class="d-flex flex-column-fluid flex-column flex-center mt-5 mt-lg-0">
 							<a href="/" class="mb-0 text-center">
-								<img src="{{asset('assets/media/jujiedso_logo.jpg')}}" class="max-h-250px" alt="" style="width:350px;"/>
+								<img src="{{asset('assets/media/anhs-logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
 							</a>
 							<!--begin::Signin-->
 							<div class="login-form login-signin">
@@ -159,7 +159,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--end::Aside body-->
 						<!--begin: Aside footer for desktop-->
 						<div class="d-flex flex-column-auto justify-content-between mt-15">
-							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2021 Jujiedso Fibr</div>
+							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2021 ANHS-SOA</div>
 							<div class="d-flex order-1 order-sm-2 my-2">
 								<a href="#" class="text-muted text-hover-primary">Privacy</a>
 								<a href="#" class="text-muted text-hover-primary ml-4">Legal</a>
@@ -172,14 +172,14 @@ License: You must have a valid license purchased only from themeforest(the above
 				</div>
 				<!--begin::Aside-->
 				<!--begin::Content-->
-				<div class="order-1 order-lg-2 flex-column-auto flex-lg-row-fluid d-flex flex-column p-7" style="background-image: url({{asset('assets/media/bg/fibr_bg_red.jpg')}}); background-position-y: center;
+				<div class="order-1 order-lg-2 flex-column-auto flex-lg-row-fluid d-flex flex-column p-7" style="background-image: url({{asset('assets/media/bg/bg-3.jpg')}}); background-position-y: center;
     background-size: cover; background-repeat:no-repeat;">
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-lg-center">
 						<div class="d-flex flex-column justify-content-center">
-							<h4 class="display-3 font-weight-bold my-7 text-white">Jujiedso Subscribers Panel</h4>
-							<p class="font-weight-bold font-size-lg text-white opacity-80">
-							<br />In this area you can manage your account, and see you bills and updates.</p>
+							<h4 class="display-3 font-weight-bold my-7 text-white">SHS-ANHS SOA</h4>
+							<p class="font-weight-bold font-size-lg text-white">
+							<br />Student Online Attendance with Biometric System</p>
 						</div>
 					</div>
 					<!--end::Content body-->

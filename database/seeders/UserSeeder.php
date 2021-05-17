@@ -22,13 +22,13 @@ class UserSeeder extends Seeder
         User::truncate();
         DB::table('role_user')->truncate();
         $admin_role = Role::where('name', 'admin')->first();
-        $finance_role = Role::where('name', 'finance')->first();
-        $staff_role = Role::where('name', 'staff')->first();
-        $subscriber_role = Role::where('name', 'subscriber')->first();
+        $teacher_role = Role::where('name', 'teacher')->first();
+        $student_role = Role::where('name', 'student')->first();
+
         $admin = User::create([
             'name' => 'admin',
             'username' => 'admin',
-            'email' => 'admin@jujiedso.ph',
+            'email' => 'admin@ansh-soa.com',
             'password' => Hash::make('password'),
             'status' => 'active'
         ]);
@@ -36,43 +36,31 @@ class UserSeeder extends Seeder
             'role_id' => $admin_role->id,
             'user_id' => $admin->id
         ]);
-        $finance = User::create([
-            'name' => 'finance',
-            'username' => 'finance',
-            'email' => 'finance@jujiedso.ph',
+        $teacher = User::create([
+            'name' => 'teacher',
+            'username' => 'teacher',
+            'email' => 'teacher@ansh-soa.com',
             'password' => Hash::make('password'),
             'status' => 'active'
         ]);
-        $insert_role_finance = Role_user::create([
-            'role_id' => $finance_role->id,
-            'user_id' => $finance->id
+        $insert_role_teacher = Role_user::create([
+            'role_id' => $teacher_role->id,
+            'user_id' => $teacher->id
         ]);
-        $staff = User::create([
+        $student = User::create([
             'name' => 'staff',
             'username' => 'staff',
-            'email' => 'staff@jujiedso.ph',
+            'email' => 'student@ansh-soa.com',
             'password' => Hash::make('password'),
             'status' => 'active'
         ]);
-        $insert_role_finance = Role_user::create([
-            'role_id' => $staff_role->id,
-            'user_id' => $staff->id
-        ]);
-        $subscriber = User::create([
-            'name' => 'subscriber',
-            'username' => 'subscriber',
-            'email' => 'subscriber@jujiedso.ph',
-            'password' => Hash::make('password'),
-            'status' => 'active'
+        $insert_role_student = Role_user::create([
+            'role_id' => $student_role->id,
+            'user_id' => $student->id
         ]);
         
-        $insert_role_subscriber = Role_user::create([
-            'role_id' => $subscriber_role->id,
-            'user_id' => $subscriber->id
-        ]);
-
         $admin->roles()->attach($admin_role);
-        $finance->roles()->attach($finance_role);
-        $staff->roles()->attach($staff_role);
+        $teacher->roles()->attach($teacher_role);
+        $student->roles()->attach($student_role);
     }
 }

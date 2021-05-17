@@ -11,8 +11,8 @@ class SettingController extends Controller
 {
     //
     public function save_settings(Request $req){
-        $update_setting = Setting::where('id', '=', 1)
-            ->update(['send_bill_day' => $req->send_bill_day, 'send_bill_due_day' => $req->send_bill_due_day, 'notice_day' => $req->notice_day, 'penalty' => $req->penalty]);
+        dd($req);
+        $update_setting = Setting::where('id', '=', 1)->update(['send_bill_day' => $req->send_bill_day, 'send_bill_due_day' => $req->send_bill_due_day, 'notice_day' => $req->notice_day, 'penalty' => $req->penalty, 'sms' => $req->sms]);
             return redirect()->back()->with('success','Settings successfully updated!');
     }
 }

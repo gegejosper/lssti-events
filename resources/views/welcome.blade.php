@@ -1,762 +1,206 @@
 <!DOCTYPE html>
 <!--
-Template: Metronic Frontend Freebie - Responsive HTML Template Based On Twitter Bootstrap 3.3.4
-Version: 1.0.0
+Template Name: Metronic - Bootstrap 4 HTML, React, Angular 11 & VueJS Admin Dashboard Theme
 Author: KeenThemes
 Website: http://www.keenthemes.com/
 Contact: support@keenthemes.com
 Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
 Like: www.facebook.com/keenthemes
-Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+Purchase: https://1.envato.market/EA4JP
+Renew Support: https://1.envato.market/EA4JP
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 -->
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
 <html lang="en">
-<!--<![endif]-->
-
-<!-- Head BEGIN -->
-<head>
-<meta charset="utf-8">
-<title>Jujiedso Fibr Optics</title>
-
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-<meta content="Jujiedso Fibr Optics" name="description">
-<meta content="fibr optics, internet service provider, Aurora ISP" name="keywords">
-<meta content="AZWay.ph" name="author">
-
-<meta property="og:site_name" content="Jujiedso Fibr Optics">
-<meta property="og:title" content="Jujiedso Fibr Optics">
-<meta property="og:description" content="Jujiedso Fibr Optics - providing best internet experience in the town">
-<meta property="og:type" content="website">
-<meta property="og:image" content="-CUSTOMER VALUE-"><!-- link to image for socio -->
-<meta property="og:url" content="-CUSTOMER VALUE-">
-
-<link rel="shortcut icon" href="{{asset('assets/media/jujiedso_ico.jpeg')}}" />
-<!-- Fonts START -->
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Pathway+Gothic+One|PT+Sans+Narrow:400+700|Source+Sans+Pro:200,300,400,600,700,900&amp;subset=all" rel="stylesheet" type="text/css">
-<!-- Fonts END -->
-<!-- Global styles BEGIN -->
-<link href="{{asset('assets/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-<link href="{{asset('assets/plugins/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-<!-- Global styles END -->
-<!-- Page level plugin styles BEGIN -->
-<link href="{{asset('assets/pages/css/animate.css')}}" rel="stylesheet">
-<link href="{{asset('assets/plugins/fancybox/source/jquery.fancybox.css')}}" rel="stylesheet">
-<!-- Page level plugin styles END -->
-<!-- Theme styles BEGIN -->
-<link href="{{asset('assets/pages/css/components.css')}}" rel="stylesheet">
-<link href="{{asset('assets/pages/css/slider.css')}}" rel="stylesheet">
-<link href="{{asset('assets/onepage/css/style.css')}}" rel="stylesheet">
-<link href="{{asset('assets/onepage/css/style-responsive.css')}}" rel="stylesheet">
-<link href="{{asset('assets/onepage/css/themes/red.css')}}" rel="stylesheet" id="style-color">
-<link href="{{asset('assets/onepage/css/custom.css')}}" rel="stylesheet">
-<!-- Theme styles END -->
-</head>
-<!--DOC: menu-always-on-top class to the body element to set menu on top -->
-<body class="menu-always-on-top">
-    <!-- Header BEGIN -->
-    <div class="header header-mobi-ext">
-        <div class="container">
-            <div class="row">
-                <!-- Logo BEGIN -->
-                <div class="col-md-2 col-sm-2">
-                    <a class="scroll site-logo" href="#promo-block"><img src="{{asset('assets/onepage/img/jujiedso_logo.png')}}" alt="Jujiedso Logo" style="width:250px;"></a>
-                </div>
-                <!-- Logo END -->
-                <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
-                <!-- Navigation BEGIN -->
-                <div class="col-md-10 pull-right">
-                    <ul class="header-navigation">
-                        <li class="current"><a href="#promo-block">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#prices">Pricing</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <!-- Navigation END -->
-            </div>
-        </div>
-    </div>
-    <!-- Header END -->
-
-    <!-- Promo block BEGIN -->
-    <div class="promo-block" id="promo-block">
-        <div id="carousel-example-generic" class="carousel slide carousel-slider" style="margin-top: 60px;">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <!-- <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li> -->
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <!-- First slide -->
-                <div class="item carousel-item-one active">
-                    <div class="center-block">
-                        <div class="center-block-wrap">
-                            <div class="center-block-body">
-                                <h2 class="margin-bottom-20 animate-delay carousel-title-v1" data-animation="animated fadeInDown">
-                                    Jujiedso <span class="color-red">Fibr Optics</span> has arrived
-                                </h2>
+	<!--begin::Head-->
+	<head><base href="../../../../">
+		<meta charset="utf-8" />
+		<title>ANHS | Student Online Attendance</title>
+		<meta name="description" content="Login page example" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="canonical" href="https://keenthemes.com/metronic" />
+		<!--begin::Fonts-->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
+		<!--end::Fonts-->
+		<!--begin::Page Custom Styles(used by this page)-->
+		<link href="{{asset('assets/css/pages/login/classic/login-2.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Page Custom Styles-->
+		<!--begin::Global Theme Styles(used by all pages)-->
+		<link href="{{asset('assets/plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Global Theme Styles-->
+		<!--begin::Layout Themes(used by all pages)-->
+		<link href="{{asset('assets/css/themes/layout/header/base/light.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/css/themes/layout/header/menu/light.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/css/themes/layout/brand/dark.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
+		<!--end::Layout Themes-->
+		<link rel="shortcut icon" href="{{asset('assets/media/anhs-logo.png')}}" />
+	</head>
+	<!--end::Head-->
+	<!--begin::Body-->
+	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+		<!--begin::Main-->
+		<div class="d-flex flex-column flex-root">
+			<!--begin::Login-->
+			<div class="login login-2 login-signin-on d-flex flex-column flex-lg-row flex-column-fluid bg-white" id="kt_login">
+				<!--begin::Aside-->
+				<div class="login-aside order-2 order-lg-1 d-flex flex-column-fluid flex-lg-row-auto bgi-size-cover bgi-no-repeat p-7 p-lg-10">
+					<!--begin: Aside Container-->
+					<div class="d-flex flex-row-fluid flex-column justify-content-between">
+						<!--begin::Aside body-->
+						<div class="d-flex flex-column-fluid flex-column flex-center mt-5 mt-lg-0">
+							<a href="/" class="mb-0 text-center">
+								<img src="{{asset('assets/media/anhs-logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
+							</a>
+							<!--begin::Signin-->
+							<div class="login-form login-signin">
+                                    
+                                <div class="text-center mb-10 mb-lg-20">
+									<h2 class="font-weight-bold">Sign In</h2>
+									<p class="text-muted font-weight-bold">Enter your username and password</p>
+								</div>
+                                <!--begin::Form-->
+                                <!-- Session Status -->
+                                @if($errors->count() != 0)
+                                    <div class="alert alert-danger">
+                                        <x-auth-session-status class="mb-4" :status="session('status')" />
+                                        <!-- Validation Errors -->
+                                        <x-auth-validation-errors class="mb-4" :errors="$errors" /> 
+                                     </div>
+                                 @endif
                                 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Second slide -->
-                <!-- <div class="item carousel-item-two">
-                    <h2 class="carousel-position-one animate-delay carousel-title-v1" data-animation="animated fadeInDown">
-                        Extremely <span class="color-red">Responsive</span> design
-                    </h2>
-                    <img class="carousel-position-two hidden-sm hidden-xs animate-delay" src="assets/onepage/img/slider/Slide2_iphone_left.png" alt="Iphone" data-animation="animated fadeInUp">
-                    <img class="carousel-position-three hidden-sm hidden-xs animate-delay" src="assets/onepage/img/slider/Slide2_iphone_right.png" alt="Iphone" data-animation="animated fadeInUp">
-                </div> -->
-
-                <!-- Third slide -->
-                <!-- <div class="item carousel-item-three">
-                    <div class="center-block">
-                        <div class="center-block-wrap">
-                            <div class="center-block-body">
-                                <h3 class="margin-bottom-20 animate-delay carousel-title-v2" data-animation="animated fadeInDown">
-                                    The clearest way into the Universe <br/> is through a forest wilderness.
-                                </h3>
-                                <span class="carousel-subtitle-v1">John Muir</span>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <i class="fa fa-angle-left" aria-hidden="true"></i>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <i class="fa fa-angle-right" aria-hidden="true"></i>
-            </a>
-        </div>
-    </div>
-    <!-- Promo block END -->
-    <!-- Prices block BEGIN -->
-    <div class="prices-block content content-center" id="prices">
-        <div class="container">
-            <h2 class="margin-bottom-50"><strong>Plan</strong> Pricing</h2>
-            <div class="row">
-                <!-- Pricing item BEGIN -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="pricing-item text-center">
-                        <div class="pricing-head">
-                            <h3>Plan 1499</h3>
-                            <p>20 Mbps</p>
-                            <em>NO DATA CAP</em>
-                        </div>
-                        <div class="pricing-content ">
-                            
-                            <ul class="list-unstyled ">
-                                <li><i class="fa fa-check"></i> Web Surfing</li>
-                                <li><i class="fa fa-check"></i> Video Streaming</li>
-                                <li><i class="fa fa-check"></i> Music Streaming</li>
-                            </ul>
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-circle"></i> Installation fee of Php 1,000</li>
-                                <li><i class="fa fa-circle"></i> Modem Set of Php 1,500</li>
-                                <li><i class="fa fa-circle"></i> Fibr Optic Cable Php 10/mtr</li>
-                            </ul>
-                            
-                        </div>
-                        <div class="pricing-footer">
-                            <a class="btn btn-default" href="javascript:void(0);">Apply Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing item END -->
-                <!-- Pricing item BEGIN -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="pricing-item">
-                        <div class="pricing-head">
-                            <h3>Plan 1199</h3>
-                            <p>10 Mbps</p>
-                            <em>NO DATA CAP</em>
-                        </div>
-                        <div class="pricing-content">
-                            <ul class="list-unstyled ">
-                                <li><i class="fa fa-check"></i> Web Surfing</li>
-                                <li><i class="fa fa-check"></i> Video Streaming</li>
-                                <li><i class="fa fa-check"></i> Music Streaming</li>
-                            </ul>
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-circle"></i> Installation fee of Php 1,000</li>
-                                <li><i class="fa fa-circle"></i> Modem Set of Php 1,500</li>
-                                <li><i class="fa fa-circle"></i> Fibr Optic Cable Php 10/mtr</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
-                            <a class="btn btn-default" href="javascript:void(0);">Apply Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing item END -->
-                <!-- Pricing item BEGIN -->
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <div class="pricing-item">
-                        <div class="pricing-head">
-                            <h3>Plan 999</h3>
-                            <p>5 Mbps</p>
-                            <em>NO DATA CAP</em>
-                        </div>
-                        <div class="pricing-content">
-                            <ul class="list-unstyled ">
-                                <li><i class="fa fa-check"></i> Web Surfing</li>
-                                <li><i class="fa fa-check"></i> Video Streaming</li>
-                                <li><i class="fa fa-check"></i> Music Streaming</li>
-                            </ul>
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-circle"></i> Installation fee of Php 1,000</li>
-                                <li><i class="fa fa-circle"></i> Modem Set of Php 1,500</li>
-                                <li><i class="fa fa-circle"></i> Fibr Optic Cable Php 10/mtr</li>
-                            </ul>
-                        </div>
-                        <div class="pricing-footer">
-                            <a class="btn btn-default" href="javascript:void(0);">Apply Now</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Pricing item END -->
-                
-            </div>
-        </div>
-    </div>
-    <!-- Prices block END -->
-    <!-- Services block BEGIN -->
-    <div class="services-block content content-center" id="services">
-        <div class="container">
-            <h2>Our <strong>Strength</strong></h2>
-            <h4>Enjoy internet as it should be.</h4>
-            <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-12 item">
-                    <i class="fa fa-heart"></i>
-                    <h3>Fantastic Support</h3>
-                    <p>Lorem ipsum et dolor amet<br> consectetuer diam</p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 item">
-                    <i class="fa fa-mobile"></i>
-                    <h3>Area Coverage</h3>
-                    <p>Lorem ipsum et dolor amet<br> consectetuer diam</p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 item">
-                    <i class="fa fa-signal"></i>
-                    <h3>Less Downtime</h3>
-                    <p>Lorem ipsum et dolor amet<br> consectetuer diam</p>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-12 item">
-                    <i class="fa fa-thumbs-up"></i>
-                    <h3>Reliable</h3>
-                    <p>Lorem ipsum et dolor amet<br> consectetuer diam</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services block END -->
-    <!-- Choose us block BEGIN -->
-    <div class="choose-us-block content text-center margin-bottom-40" id="benefits">
-        <div class="container">
-            <h2>Why <strong>choose us</strong></h2>
-            <h4>We deliver end-to-end Pure Fiber Optic connection to empower your home and business with seamless internet experience, so you experience better.</h4>
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 text-left">
-                    <img src="assets/onepage/img/whychoose.jpg" alt="Why to choose us" class="img-responsive">
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 text-left">
-                    <div class="panel-group" id="accordion1">
-                        
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_2">Unlimited Internet</a>
-                                </h5>
-                            </div>
-                           
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_3">No Capping</a>
-                                </h5>
-                            </div>
-                           
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_4">Higher Internet Speed</a>
-                                </h5>
-                            </div>
-                            
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_5">End to end pure Fiber</a>
-                                </h5>
-                            </div>
-                            
-                        </div>
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#accordion1_6">Most Affordable</a>
-                                </h5>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Choose us block END -->
-    <!-- Checkout block BEGIN -->
-    <div class="checkout-block content">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-md-1"></div>
-            <div class="col-md-7">
-              <h2 style="letter-spacing: 3px;">Get the internet that you deserve!</h2>
-            </div>
-            <div class="col-md-1 text-left">
-              <a href="#" target="_blank" class="btn btn-primary btn-xl">Apply Now!</a>
-            </div>
-          </div>
-        </div>
-        </div>
-        <!-- Checkout block END -->
-    <!-- About block BEGIN -->
-    <div class="about-block content content-center" id="about">
-        <div class="container">
-            <h2><strong>Metronic</strong> Inspires</h2>
-            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h4>
-            <div class="ab-trio">
-                <img src="assets/onepage/img/trio.png" alt="" class="img-responsive">
-                <div class="ab-cirlce ab-cirle-blue">
-                    <i class="fa fa-code"></i>
-                    <strong>Clean Code</strong>
-                </div>
-                <div class="ab-cirlce ab-cirle-red">
-                    <i class="fa fa-gift"></i>
-                    <strong>Huge Updates</strong>
-                </div>
-                <div class="ab-cirlce ab-cirle-green">
-                    <i class="fa fa-mobile"></i>
-                    <strong>Responsive</strong>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- About block END -->
-
-    
-
-    <!-- Message block BEGIN -->
-    <div class="message-block content content-center valign-center" id="message-block">
-        <div class="valign-center-elem">
-            <h2>The details are not the details <strong>They make the design</strong></h2>
-            <em>KEEN THEMES</em>
-        </div>
-    </div>
-    <!-- Message block END -->
-
-    <!-- Team block BEGIN -->
-    <div class="team-block content content-center margin-bottom-40" id="team">
-        <div class="container">
-            <h2>Meet <strong>the team</strong></h2>
-            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h4>
-            <div class="row">
-                <div class="col-md-4 item">
-                    <img src="assets/onepage/img/people/img6-large.jpg" alt="Marcus Doe" class="img-responsive">
-                    <h3>Marcus Doe</h3>
-                    <em>Founder</em>
-                    <p>Lorem ipsum dolor amet, tempor ut labore magna tempor dolore</p>
-                    <div class="tb-socio">
-                        <a href="javascript:void(0);" class="fa fa-facebook"></a>
-                        <a href="javascript:void(0);" class="fa fa-twitter"></a>
-                        <a href="javascript:void(0);" class="fa fa-google-plus"></a>
-                    </div>
-                </div>
-                <div class="col-md-4 item">
-                    <img src="assets/onepage/img/people/img7-large.jpg" alt="Elena Taylor" class="img-responsive">
-                    <h3>Elena Taylor</h3>
-                    <em>Designer</em>
-                    <p>Lorem ipsum dolor amet, tempor ut labore magna tempor dolore</p>
-                    <div class="tb-socio">
-                        <a href="javascript:void(0);" class="fa fa-facebook"></a>
-                        <a href="javascript:void(0);" class="fa fa-twitter"></a>
-                        <a href="javascript:void(0);" class="fa fa-google-plus"></a>
-                    </div>
-                </div>
-                <div class="col-md-4 item">
-                    <img src="assets/onepage/img/people/img8-large.jpg" alt="Cris Nilson" class="img-responsive">
-                    <h3>Cris Nilson</h3>
-                    <em>Developer</em>
-                    <p>Lorem ipsum dolor amet, tempor ut labore magna tempor dolore</p>
-                    <div class="tb-socio">
-                        <a href="javascript:void(0);" class="fa fa-facebook"></a>
-                        <a href="javascript:void(0);" class="fa fa-twitter"></a>
-                        <a href="javascript:void(0);" class="fa fa-google-plus"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Team block END -->
-
-    <!-- Portfolio block BEGIN -->
-    <div class="portfolio-block content content-center" id="portfolio">
-        <div class="container">
-            <h2 class="margin-bottom-50">Latest <strong>works</strong></h2>
-        </div>
-        <div class="row">
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/2.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/2.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/6.jpg" alt="NAME" class="img-responsive">
-                    <a href="assets/onepage/img/portfolio/6.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/8.jpg" alt="NAME" class="img-responsive">
-                    <a href="assets/onepage/img/portfolio/8.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/3.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/3.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/5.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/5.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/4.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/4.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/1.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/1.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/10.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/10.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/9.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/9.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/7.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/7.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/2.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/2.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-            <div class="item col-md-2 col-sm-6 col-xs-12">
-                <img src="assets/onepage/img/portfolio/8.jpg" alt="NAME" class="img-responsive">
-                <a href="assets/onepage/img/portfolio/8.jpg" class="zoom valign-center">
-                    <div class="valign-center-elem">
-                        <strong>London City Project</strong>
-                        <em>Property</em>
-                        <b>Details</b>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- Portfolio block END -->
-
-   
-
-    
-
-    <!-- Facts block BEGIN -->
-    <div class="facts-block content content-center" id="facts-block">
-        <h2>Some facts about us</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="item">
-                        <strong>39</strong>
-                        Projects Completed
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="item">
-                        <strong>14</strong>
-                        Team Members
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="item">
-                        <strong>29k+</strong>
-                        Products Sold
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-3 col-xs-6">
-                    <div class="item">
-                        <strong>500</strong>
-                        Weekly Sales
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Facts block END -->
-
-    
-
-    <!-- Testimonials block BEGIN -->
-    <div class="testimonials-block content content-center margin-bottom-65">
-        <div class="container">
-            <h2>Customer <strong>testimonials</strong></h2>
-            <h4>Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h4>
-            <div class="carousel slide" data-ride="carousel" id="testimonials-block">
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-                    <!-- Carousel items -->
-                    <div class="active item">
-                        <blockquote>
-                            <p>This is the most awesome, full featured, easy, costomizeble theme. It’s extremely responsive and very helpful to all suggestions.</p>
-                        </blockquote>
-                        <span class="testimonials-name">Mark Doe</span>
-                    </div>
-                    <!-- Carousel items -->
-                    <div class="item">
-                        <blockquote>
-                            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse.</p>
-                        </blockquote>
-                        <span class="testimonials-name">Joe Smith</span>
-                    </div>
-                    <!-- Carousel items -->
-                    <div class="item">
-                        <blockquote>
-                            <p>Williamsburg carles vegan helvetica. Cosby sweater eu banh mi, qui irure terry richardson ex squid Aliquip placeat salvia cillum iphone.</p>
-                        </blockquote>
-                        <span class="testimonials-name">Linda Adams</span>
-                    </div>
-                </div>
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#testimonials-block" data-slide-to="0" class="active"></li>
-                    <li data-target="#testimonials-block" data-slide-to="1"></li>
-                    <li data-target="#testimonials-block" data-slide-to="2"></li>
-                </ol>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonials block END -->
-
-    <!-- Partners block BEGIN -->
-    <div class="partners-block">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <img src="assets/onepage/img/partners/cisco.png" alt="cisco">
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <img src="assets/onepage/img/partners/walmart.png" alt="walmart">
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <img src="assets/onepage/img/partners/gamescast.png" alt="gamescast">
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <img src="assets/onepage/img/partners/spinwokrx.png" alt="spinwokrx">
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <img src="assets/onepage/img/partners/ngreen.png" alt="ngreen">
-                </div>
-                <div class="col-md-2 col-sm-3 col-xs-6">
-                    <img src="assets/onepage/img/partners/vimeo.png" alt="vimeo">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Partners block END -->
-
-    <!-- BEGIN PRE-FOOTER -->
-    <div class="pre-footer" id="contact">
-        <div class="container">
-            <div class="row">
-                <!-- BEGIN BOTTOM ABOUT BLOCK -->
-                <div class="col-md-4 col-sm-6 pre-footer-col">
-                    <h2>About us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat. Nostrud exerci tation ullamcorper suscipit lobortis nisl aliquip  commodo consequat. </p>
-                    <p>Duis autem vel eum iriure dolor vulputate velit esse molestie at dolore.</p>
-                </div>
-                <!-- END BOTTOM ABOUT BLOCK -->
-                <!-- BEGIN TWITTER BLOCK --> 
-                <div class="col-md-4 col-sm-6 pre-footer-col">
-                    
-                </div>
-                <!-- END TWITTER BLOCK -->
-                <div class="col-md-4 col-sm-6 pre-footer-col">
-                    <!-- BEGIN BOTTOM CONTACTS -->
-                    <h2>Our Contacts</h2>
-                    <address class="margin-bottom-20">
-                        35, Lorem Lis Street, Park Ave<br>
-                        California, US<br>
-                        Phone: 300 323 3456<br>
-                        Fax: 300 323 1456<br>
-                        Email: <a href="mailto:info@metronic.com">info@metronic.com</a><br>
-                        Skype: <a href="skype:metronic">metronic</a>
-                    </address>
-                    <!-- END BOTTOM CONTACTS -->
-                    <div class="pre-footer-subscribe-box">
-                        <h2>Newsletter</h2>
-                        <form action="javascript:void(0);">
-                            <div class="input-group">
-                                <input type="text" placeholder="youremail@mail.com" class="form-control">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="submit">Subscribe</button>
-                                </span>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END PRE-FOOTER -->
-
-    <!-- BEGIN FOOTER -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <!-- BEGIN COPYRIGHT -->
-                <div class="col-md-4 col-sm-4">
-                    <div class="copyright">2021 © Jujiedso Fibr Optics. ALL Rights Reserved.</div>
-                </div>
-                <!-- END COPYRIGHT -->
-                <!-- BEGIN SOCIAL ICONS -->
-                <div class="col-md-4 col-sm-4">
-                    <ul class="social-icons">
-                        <li><a class="rss" data-original-title="rss" href="javascript:void(0);"></a></li>
-                        <li><a class="facebook" data-original-title="facebook" href="javascript:void(0);"></a></li>
-                        <li><a class="twitter" data-original-title="twitter" href="javascript:void(0);"></a></li>
-                        <li><a class="googleplus" data-original-title="googleplus" href="javascript:void(0);"></a></li>
-                        <li><a class="linkedin" data-original-title="linkedin" href="javascript:void(0);"></a></li>
-                        <li><a class="youtube" data-original-title="youtube" href="javascript:void(0);"></a></li>
-                        <li><a class="vimeo" data-original-title="vimeo" href="javascript:void(0);"></a></li>
-                        <li><a class="skype" data-original-title="skype" href="javascript:void(0);"></a></li>
-                    </ul>
-                </div>
-                <!-- END SOCIAL ICONS -->
-                <!-- BEGIN COPYRIGHT -->
-                <div class="col-md-4 col-sm-4 text-right">
-                    <p class="powered">Developed by: <a href="http://azway.ph">AZWay.ph</a></p>
-                </div>
-                <!-- END COPYRIGHT -->
-            </div>
-        </div>
-    </div>
-    <!-- END FOOTER -->
-    <a href="#promo-block" class="go2top scroll"><i class="fa fa-arrow-up"></i></a>
-
-<!--[if lt IE 9]>
-<script src="assets/plugins/respond.min.js"></script>
-<![endif]-->
-<!-- Load JavaScripts at the bottom, because it will reduce page load time -->
-<!-- Core plugins BEGIN (For ALL pages) -->
-<script src="{{asset('assets/plugins/jquery.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/plugins/jquery-migrate.min.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/plugins/bootstrap/js/bootstrap.min.js')}}" type="text/javascript"></script>
-<!-- Core plugins END (For ALL pages) -->
-<!-- Core plugins BEGIN (required only for current page) -->
-<script src="{{asset('assets/plugins/fancybox/source/jquery.fancybox.pack.js')}}" type="text/javascript"></script><!-- pop up -->
-<script src="{{asset('assets/plugins/jquery.easing.js')}}"></script>
-<script src="{{asset('assets/plugins/jquery.parallax.js')}}"></script>
-<script src="{{asset('assets/plugins/jquery.scrollTo.min.js')}}"></script>
-<script src="{{asset('assets/onepage/scripts/jquery.nav.js')}}"></script>
-<!-- Core plugins END (required only for current page) -->
-<!-- Global js BEGIN -->
-<script src="{{asset('assets/onepage/scripts/layout.js')}}" type="text/javascript"></script>
-<script src="{{asset('assets/pages/scripts/bs-carousel.js')}}" type="text/javascript"></script>
-<script>
-    jQuery(document).ready(function() {
-        Layout.init();
-    });
-</script>
-<!-- Global js END -->
-</body>
+                                
+								<form class="form" novalidate="novalidate" id="kt_login_forgot_form" method="POST" action="{{ route('login') }}">
+                                    @csrf
+									<div class="form-group py-3 m-0">
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="Username" placeholder="Username" name="username" autocomplete="off" />
+									</div>
+									<div class="form-group py-3 border-top m-0">
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="Password" placeholder="Password" name="password" id="password" required autocomplete="current-password"/>
+									</div>
+									<div class="form-group d-flex flex-wrap justify-content-between align-items-center mt-3">
+										<div class="checkbox-inline">
+                                            <label for="remember_me" class="inline-flex items-center">
+                                                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
+                                                <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                                            </label>
+										</div>
+										<a href="javascript:;" id="kt_login_forgot" class="text-muted text-hover-primary">Forgot Password ?</a>
+									</div>
+									<div class="form-group d-flex flex-wrap justify-content-between align-items-center mt-2">
+										<div class="my-3 mr-2">
+											<!-- <span class="text-muted mr-2">Don't have an account?</span>
+											<a href="javascript:;" id="kt_login_signup" class="font-weight-bold">Signup</a> -->
+										</div>
+										<input type="submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3" value="Sign In">
+									</div>
+								</form>
+								<!--end::Form-->
+							</div>
+							<!--end::Signin-->
+							<!--begin::Signup-->
+							<div class="login-form login-signup">
+								<div class="text-center mb-10 mb-lg-20">
+									<h3 class="">Sign Up</h3>
+									<p class="text-muted font-weight-bold">Enter your details to create your account</p>
+								</div>
+								<!--begin::Form-->
+								<form class="form" novalidate="novalidate" id="kt_login_signup_form">
+									<div class="form-group py-3 m-0">
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="text" placeholder="Fullname" name="fullname" autocomplete="off" />
+									</div>
+									<div class="form-group py-3 border-top m-0">
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Email" name="email" autocomplete="off" />
+									</div>
+									<div class="form-group py-3 border-top m-0">
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Password" name="password" autocomplete="off" />
+									</div>
+									<div class="form-group py-3 border-top m-0">
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="password" placeholder="Confirm password" name="cpassword" autocomplete="off" />
+									</div>
+									<div class="form-group mt-5">
+										<div class="checkbox-inline">
+											<label class="checkbox checkbox-outline">
+											<input type="checkbox" name="agree" />
+											<span></span>I Agree the
+											<a href="#" class="ml-1">terms and conditions</a>.</label>
+										</div>
+									</div>
+									<div class="form-group d-flex flex-wrap flex-center">
+										<button id="kt_login_signup_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2">Submit</button>
+										<button id="kt_login_signup_cancel" class="btn btn-outline-primary font-weight-bold px-9 py-4 my-3 mx-2">Cancel</button>
+									</div>
+								</form>
+								<!--end::Form-->
+							</div>
+							<!--end::Signup-->
+							<!--begin::Forgot-->
+							<div class="login-form login-forgot">
+								<div class="text-center mb-10 mb-lg-20">
+									<h3 class="">Forgotten Password ?</h3>
+									<p class="text-muted font-weight-bold">Enter your email to reset your password</p>
+								</div>
+								<!--begin::Form-->
+								<form class="form" novalidate="novalidate" id="kt_login_forgot_form">
+									<div class="form-group py-3 border-bottom mb-10">
+										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="email" placeholder="Email" name="email" autocomplete="off" />
+									</div>
+									<div class="form-group d-flex flex-wrap flex-center">
+										<button id="kt_login_forgot_submit" class="btn btn-primary font-weight-bold px-9 py-4 my-3 mx-2">Submit</button>
+										<button id="kt_login_forgot_cancel" class="btn btn-light-primary font-weight-bold px-9 py-4 my-3 mx-2">Cancel</button>
+									</div>
+								</form>
+								<!--end::Form-->
+							</div>
+							<!--end::Forgot-->
+						</div>
+						<!--end::Aside body-->
+						<!--begin: Aside footer for desktop-->
+						<div class="d-flex flex-column-auto justify-content-between mt-15">
+							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2021 ANHS-SOA</div>
+							<div class="d-flex order-1 order-sm-2 my-2">
+								<a href="#" class="text-muted text-hover-primary">Privacy</a>
+								<a href="#" class="text-muted text-hover-primary ml-4">Legal</a>
+								<a href="#" class="text-muted text-hover-primary ml-4">Contact</a>
+							</div>
+						</div>
+						<!--end: Aside footer for desktop-->
+					</div>
+					<!--end: Aside Container-->
+				</div>
+				<!--begin::Aside-->
+				<!--begin::Content-->
+				<div class="order-1 order-lg-2 flex-column-auto flex-lg-row-fluid d-flex flex-column p-7" style="background-image: url({{asset('assets/media/bg/bg-3.jpg')}}); background-position-y: center;
+    background-size: cover; background-repeat:no-repeat;">
+					<!--begin::Content body-->
+					<div class="d-flex flex-column-fluid flex-lg-center">
+						<div class="d-flex flex-column justify-content-center">
+							<h4 class="display-3 font-weight-bold my-7 text-white">SHS-ANHS SOA</h4>
+							<p class="font-weight-bold font-size-lg text-white">
+							<br />Student Online Attendance with Biometric System</p>
+						</div>
+					</div>
+					<!--end::Content body-->
+				</div>
+				<!--end::Content-->
+			</div>
+			<!--end::Login-->
+		</div>
+		<!--end::Main-->
+		<script>var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";</script>
+		<!--begin::Global Config(global config for global JS scripts)-->
+		<script>var KTAppSettings = { "breakpoints": { "sm": 576, "md": 768, "lg": 992, "xl": 1200, "xxl": 1400 }, "colors": { "theme": { "base": { "white": "#ffffff", "primary": "#3699FF", "secondary": "#E5EAEE", "success": "#1BC5BD", "info": "#8950FC", "warning": "#FFA800", "danger": "#F64E60", "light": "#E4E6EF", "dark": "#181C32" }, "light": { "white": "#ffffff", "primary": "#E1F0FF", "secondary": "#EBEDF3", "success": "#C9F7F5", "info": "#EEE5FF", "warning": "#FFF4DE", "danger": "#FFE2E5", "light": "#F3F6F9", "dark": "#D6D6E0" }, "inverse": { "white": "#ffffff", "primary": "#ffffff", "secondary": "#3F4254", "success": "#ffffff", "info": "#ffffff", "warning": "#ffffff", "danger": "#ffffff", "light": "#464E5F", "dark": "#ffffff" } }, "gray": { "gray-100": "#F3F6F9", "gray-200": "#EBEDF3", "gray-300": "#E4E6EF", "gray-400": "#D1D3E0", "gray-500": "#B5B5C3", "gray-600": "#7E8299", "gray-700": "#5E6278", "gray-800": "#3F4254", "gray-900": "#181C32" } }, "font-family": "Poppins" };</script>
+		<!--end::Global Config-->
+		<!--begin::Global Theme Bundle(used by all pages)-->
+		<script src="{{asset('assets/plugins/global/plugins.bundle.js')}}"></script>
+		<script src="{{asset('assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
+		<script src="{{asset('assets/js/scripts.bundle.js')}}"></script>
+		<!--end::Global Theme Bundle-->
+		<!--begin::Page Scripts(used by this page)-->
+		<script src="{{asset('assets/js/pages/custom/login/login-general.js')}}"></script>
+		<!--end::Page Scripts-->
+	</body>
+	<!--end::Body-->
 </html>

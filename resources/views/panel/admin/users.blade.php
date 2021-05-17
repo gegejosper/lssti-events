@@ -16,18 +16,18 @@
 						<div class="card-header border-0 py-5">
 							<h3 class="card-title align-items-start flex-column">
 								<span class="card-label font-weight-bolder text-dark">Users</span>
-								<span class="text-muted mt-3 font-weight-bold font-size-sm">List of Jujiedso web applications users listed here.</span>
+								<span class="text-muted mt-3 font-weight-bold font-size-sm">List ANHS-SOA users listed here.</span>
 							</h3>
-							<div class="card-toolbar">
+							<!-- <div class="card-toolbar">
 								<a href="javascript:;" class="btn btn-primary font-weight-bolder font-size-sm mr-3 add-user"><i class="fas fa-plus"></i> New User</a>
-							</div>
+							</div> -->
 						</div>
 						<!--end::Header-->
 						<!--begin::Body-->
 						<div class="card-body pt-0 pb-3">
 							<div class="tab-content">
 								<!--begin::Table-->
-								{{$users->links()}}
+								{{$users->links('pagination::bootstrap-4')}}
 								<div class="table-responsive">
 									<table class="table table-head-custom table-head-bg table-borderless table-vertical-center">
 									<thead>

@@ -3,20 +3,20 @@
 <html lang="en">
 	<!--begin::Head-->
 	<head>
-    <title>@yield('title') - Jujiedso Fibr Portal</title>
+    <title>@yield('title') - ANHS-SOA</title>
 
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <meta content="Jujiedso Fibr Portal" name="description">
-    <meta content="internet fibr, fibr optics, local isp aurora" name="keywords">
-    <meta content="Jujiedso Fibr" name="author">
+    <meta content="ANHS-SOA" name="description">
+    <meta content="ANHS-SOA, student online attendance" name="keywords">
+    <meta content="ANHS-SOA" name="author">
 
-    <meta property="og:site_name" content="Jujiedso Fibr">
-    <meta property="og:title" content="Jujiedso Fibr">
-    <meta property="og:description" content="Jujiedso Fibr Portal">
+    <meta property="og:site_name" content="ANHS-SOA">
+    <meta property="og:title" content="ANHS-SOA">
+    <meta property="og:description" content="ANHS-SOA Portal">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{asset('assets/media/jujiedso_logo.jpg')}}"><!-- link to image for socio -->
+    <meta property="og:image" content="{{asset('assets/media/anhs-logo.png')}}"><!-- link to image for socio -->
     <meta property="og:url" content="http://jujiedso.com">
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
@@ -31,7 +31,7 @@
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-        <link rel="shortcut icon" href="{{asset('assets/media/jujiedso_ico.jpeg')}}" />
+        <link rel="shortcut icon" href="{{asset('assets/media/anhs-logo.png')}}" />
         <style>
             html, body {
                 background-color: #fff;
@@ -80,7 +80,7 @@
 					<div class="d-flex flex-row-fluid flex-column justify-content-between">
 						<!--begin::Logo-->
 						<a href="/" class="text-center pt-2">
-						<img src="{{asset('assets/media/jujiedso_logo.jpg')}}" class="max-h-250px" alt="" style="width:350px;"/>
+						<img src="{{asset('assets/media/anhs-logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
 						</a>
 						<!--end::Logo-->
 						<!--begin::Aside body-->
@@ -100,12 +100,12 @@
 				</div>
 				<!--begin::Aside-->
 				<!--begin::Content-->
-				<div class="content order-1 order-lg-2 flex-column-row-auto flex-grow-1 pt-md-0 pb-40 bgi-no-repeat bgi-position-y-center bgi-position-x-center" style="background-image: url({{asset('assets/media/bg/fibr_bg_red.jpg')}}); background-position-y: center;
+				<div class="content order-1 order-lg-2 flex-column-row-auto flex-grow-1 pt-md-0 pb-40 bgi-no-repeat bgi-position-y-center bgi-position-x-center" style="background-image: url({{asset('assets/media/bg/bg-3.jpg')}}); background-position-y: center;
     background-size: cover; background-repeat:no-repeat;">
 					<!--begin::Content body-->
 					<div class="d-flex flex-center pb-lg-40 pt-lg-0 pt-md-0 pb-40">
 						<div class="d-flex flex-column justify-content-center text-center pt-xl-30 pt-lg-20 pb-sm-10">
-						<h4 class="display-3 font-weight-bold my-7 text-white">Jujiedso Subscribers Panel</h4>
+						<h4 class="display-3 font-weight-bold my-7 text-white">ANHS-SOA Panel</h4>
 							<p class="font-weight-bold font-size-lg text-white opacity-80">
 							
 						</div>
