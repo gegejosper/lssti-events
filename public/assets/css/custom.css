@@ -5,3 +5,13 @@
     position: relative;
     z-index: 2;
 }
+@media print
+{    
+    body {
+        -webkit-print-color-adjust: exact !important;
+      }
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+}

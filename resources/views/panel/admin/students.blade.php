@@ -24,6 +24,34 @@
 						<!--end::Header-->
 						<!--begin::Body-->
 						<div class="card-body pt-0 pb-3">
+                        <form action="{{route('panel.admin.filter_students')}}" method="post">
+                                <div class="form-group row">
+                                    @csrf
+                                    <div class="col-lg-2">
+                                        <label class="col-form-label">School Year</label>
+                                        <select name="year" id="year" class="form-control form-control-solid">
+                                           <option value="2021-2022">2021-2022</option>
+                                           <option value="2022-2023">2022-2023</option>
+                                           <option value="2023-2024">2023-2024</option>
+                                           <option value="2024-2025">2024-2025</option>
+                                        </select>
+                                        <span class="form-text text-muted">Please select month</span>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <label class="col-form-label">Semester</label>
+                                        <select name="semester" id="semester" class="form-control form-control-solid">
+                                            <option value="1st Semester">1st Semester</option>
+                                            <option value="2nd Semester">2nd Semester</option>
+                                            <option value="Summer">Summer</option>
+                                        </select>
+                                        <span class="form-text text-muted">Please select month</span>
+                                    </div>
+                                    <div class="col-lg-2 pt-11">
+                                        <label class="col-form-label"> &nbsp;</label>
+                                        <button type="submit" class="btn btn-primary"> Students</button>
+                                    </div>
+                                </div>
+                            </form>
 							<div class="tab-content">
 								<!--begin::Table-->
 								<div class="table-responsive">

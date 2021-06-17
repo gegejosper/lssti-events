@@ -18,6 +18,7 @@ use App\Models\Subject;
 use App\Models\Subject_attendance;
 use App\Models\Teacher;
 use App\Models\Gate_attendance;
+use App\Models\Attendance_setup;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 
@@ -32,10 +33,33 @@ class AdminController extends Controller
         $female_students = Student::where('gender', 'FEMALE')->where('status', 'active')->count();
         $grade11_students = Student::where('grade_year', 'Grade-11')->where('status', 'active')->count();
         $grade12_students = Student::where('grade_year', 'Grade-12')->where('status', 'active')->count();
+        
+        $grade12_students_female = Student::where('grade_year', 'Grade-12')->where('status', 'active')->where('gender', 'FEMALE')->count();
+        $grade12_students_male = Student::where('grade_year', 'Grade-12')->where('status', 'active')->where('gender', 'MALE')->count();
+        $grade11_students_female = Student::where('grade_year', 'Grade-11')->where('status', 'active')->where('gender', 'FEMALE')->count();
+        $grade11_students_male = Student::where('grade_year', 'Grade-11')->where('status', 'active')->where('gender', 'MALE')->count();
+
+
         $today = date('Y-m-d');
         $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
         $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
-        return view('panel.admin.dashboard',compact('page_name', 'gate_logged', 'students', 'gate_logged_count', 'male_students', 'female_students', 'grade11_students', 'grade12_students'));
+        return view('panel.admin.dashboard',compact('page_name', 'gate_logged', 'students', 'gate_logged_count', 
+        'male_students', 'female_students', 'grade11_students', 'grade12_students', 'grade12_students_female', 'grade12_students_male',
+        'grade11_students_female', 'grade11_students_male'));
+    }
+
+    public function logs(){
+        $page_name = 'Dashboard';
+        $gate_logged = Gate_attendance::with('student')->latest()->take(10)->get();
+        $students = Student::where('status', 'active')->count();
+        $male_students = Student::where('gender', 'MALE')->where('status', 'active')->count();
+        $female_students = Student::where('gender', 'FEMALE')->where('status', 'active')->count();
+        $grade11_students = Student::where('grade_year', 'Grade-11')->where('status', 'active')->count();
+        $grade12_students = Student::where('grade_year', 'Grade-12')->where('status', 'active')->count();
+        $today = date('Y-m-d');
+        $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
+        $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
+        return view('panel.admin.logs',compact('page_name', 'gate_logged', 'students', 'gate_logged_count', 'male_students', 'female_students', 'grade11_students', 'grade12_students'));
     }
 
     public function users(){
@@ -47,9 +71,17 @@ class AdminController extends Controller
 
     public function messaging(){
         $page_name = 'Messaging';
-        return view('panel.admin.messaging',compact('page_name', 'page_name'));
+        $messages = Message::latest()->get();
+        return view('panel.admin.messaging',compact('page_name', 'page_name', 'messages'));
     }
     public function send_sms(Request $req){
+        $message = new Message();
+        $message->message_type = $req->reciever;
+        $message->subject = 'n/a';
+        $message->message = $req->sms_message;
+        $message->status = 'sent';
+        $message->save();
+
         if($req->reciever == 'teacher'){
             $teachers = Teacher::where('status', 'active')->get();
             foreach($teachers as $teacher){
@@ -134,14 +166,16 @@ class AdminController extends Controller
     public function students(){
         $page_name = 'Students';
         $students = Student::latest()->get();
+        $school_years =School_year::get();
         $sections = Section::where('grade_year', 'Grade-11')->where('status', 'active')->get();
         $strands = Strand::where('status', 'active')->get();
-        return view('panel.admin.students',compact('page_name', 'students', 'strands', 'sections'));
+        return view('panel.admin.students',compact('page_name', 'students', 'strands', 'sections', 'school_years'));
     }
     public function setup(){
         $settings = Setting::first();
+        $attendance_setups = Attendance_setup::first();
         $page_name = 'Setup';
-        return view('panel.admin.setup',compact('page_name', 'settings'));
+        return view('panel.admin.setup',compact('page_name', 'settings', 'attendance_setups'));
     }
     public function save_setup(Request $req){
         //dd($req);
@@ -156,6 +190,18 @@ class AdminController extends Controller
         $data->use_system_date = $req->use_system_date;
         $data->save();
         return redirect()->back()->with('success','Setup updated...');
+    }
+
+    public function save_attendance_setup(Request $req){
+        //dd($req);
+        $data = Attendance_setup::find($req->school_setting_id);
+        $data->school_name = $req->school_name;
+        $data->school_id = $req->school_id;
+        $data->district = $req->district;
+        $data->division= $req->division;
+        $data->region = $req->region;
+        $data->save();
+        return redirect()->back()->with('success_attendance_setting','School setting updated');
     }
     public function gate_attendance(Request $req){
         

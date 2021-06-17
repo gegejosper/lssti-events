@@ -36,12 +36,13 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{asset('assets/css/themes/layout/header/menu/light.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('assets/css/themes/layout/brand/light.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('assets/css/themes/layout/aside/light.css')}}" rel="stylesheet" type="text/css" />
+		<link href="{{asset('assets/css/custom.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="{{asset('assets/media/anhs-logo.png')}}" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
-	<body id="kt_body" class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+	<body id="kt_body" class="print-content-only header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
 		<!--begin::Main-->
 		<!--begin::Header Mobile-->
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
@@ -187,6 +188,12 @@ License: You must have a valid license purchased only from themeforest(the above
 											</svg>
 										</span>
 										<span class="menu-text">Gate Attendance</span>
+									</a>
+								</li>
+								<li class="menu-item" aria-haspopup="true" id="admin_packages">
+									<a href="/panel/admin/logs" class="menu-link">
+									<i class="menu-icon ki ki-bold-more-hor icon-md"></i>
+										<span class="menu-text">Logs</span>
 									</a>
 								</li>
 

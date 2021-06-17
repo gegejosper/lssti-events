@@ -13,6 +13,9 @@ use App\Models\User;
 use App\Models\Role;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Role_user;
+use App\Models\Students_schoolyear;
+use App\Models\School_year;
+
 
 class StudentController extends Controller
 {
@@ -51,6 +54,15 @@ class StudentController extends Controller
             $student_info->status ='active';
             $student_info->user_id =0;
             $student_info->save();
+
+            $sc = School_year::where('status', 'active')->latest()->first();
+            $sc_students = new Students_schoolyear();
+            $sc_students->schoolyear = $sc->cy;  
+            $sc_students->semester =$sc->semester;  
+            $sc_students->student_id =$student_info->id;  
+            $sc_students->section_id =$student_info->section; 
+            $sc_students->status= 'active';   
+            $sc_students->save();  
 
             $student_role = Role::where('name', 'student')->first();
             $student = User::create([
@@ -92,5 +104,16 @@ class StudentController extends Controller
                 return response($output);
             }
         }
+    }
+    public function filter_students(Request $req){
+        $page_name = 'Students';
+        $year = $req->year;
+        $semester= $req->semester;
+        $students = Students_schoolyear::with('student','section_info')->where('schoolyear', $req->year)->where('semester', $req->semester)->latest()->get();
+        //dd($students);
+        $school_years =School_year::get();
+        $sections = Section::where('grade_year', 'Grade-11')->where('status', 'active')->get();
+        $strands = Strand::where('status', 'active')->get();
+        return view('panel.admin.students-filter',compact('page_name', 'students', 'strands', 'sections', 'school_years', 'year', 'semester'));
     }
 }

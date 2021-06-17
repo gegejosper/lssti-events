@@ -43,7 +43,11 @@
 											<td> <a href="javascript:;" class="btn btn-light-success font-weight-bolder font-size-sm mark-present"
                                         		data-schedule_id="{{$schedule_id}}"
 												data-student_id="{{$student->student_id}}"
-												><i class="fas fa-check"></i></a></td>
+												><i class="fas fa-check"></i></a> | 
+												<a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm mark-late"
+                                        		data-schedule_id="{{$schedule_id}}"
+												data-student_id="{{$student->student_id}}"
+												><i class="fas fa-minus"></i></a></td>
 										</tr>
 										@endif
 									@endforeach

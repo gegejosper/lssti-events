@@ -15,7 +15,7 @@
 						<!--begin::Header-->
 						<div class="card-header border-0 py-5">
 							<h3 class="card-title align-items-start flex-column">
-								<span class="card-label font-weight-bolder text-dark">Subscriber Profile</span>
+								<span class="card-label font-weight-bolder text-dark">Student's Profile</span>
 							</h3>
 							
 						</div>

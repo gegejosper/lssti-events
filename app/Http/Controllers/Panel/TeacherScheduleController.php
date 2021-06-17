@@ -42,7 +42,7 @@ class TeacherScheduleController extends Controller
         $schedule->save();
         $schedule->subject_name = $subject->name;
         $schedule->semester = $school_year->semester;
-        $schedule->year = $school_year->cy;
+        $schedule->school_year = $school_year->cy;
 
         foreach($req->subject_days as $day){
             $days = new Schedule_day();
@@ -64,13 +64,14 @@ class TeacherScheduleController extends Controller
     public function view_schedule($schedule_id){
         $page_name = 'Schedule';
         $setting = Setting::first();
+        
         if($setting->use_system_date == 'yes'){
             $today_date = $setting->system_date;
             $log_time = $pieces = explode("-", $today_date);
             $date_today = $log_time[2];
             $date_month = $log_time[1];
             $date_year = $log_time[0];
-            $today_day = date('D', strtotime($today_date));
+            $today_day = date('D');
         }
         else {
             $date_today = date('d');
