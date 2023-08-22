@@ -155,7 +155,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
                 <!-- END SOCIAL ICONS -->
                 <!-- BEGIN COPYRIGHT -->
                 <div class="col-md-4 col-sm-4 text-right">
-                    <p class="powered">Developed by: <a href="http://azway.ph">AZWay.ph</a></p>
+                    <!-- <p class="powered">Developed by: <a href="http://azway.ph">AZWay.ph</a></p> -->
                 </div>
                 <!-- END COPYRIGHT -->
             </div>

@@ -52,12 +52,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Aside body-->
 						<div class="d-flex flex-column-fluid flex-column flex-center mt-5 mt-lg-0">
 							<a href="/" class="mb-0 text-center">
-								<img src="{{asset('assets/media/anhs-logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
+								<img src="{{asset('assets/media/lssti_logo.png')}}" class="max-h-250px" alt="" style="width:250px;"/>
 							</a>
 							<!--begin::Signin-->
 							<div class="login-form login-signin">
                                     
-                                <div class="text-center mb-10 mb-lg-20">
+                                <div class="text-center mb-10 mt-10 mb-lg-20">
 									<h2 class="font-weight-bold">Sign In</h2>
 									<p class="text-muted font-weight-bold">Enter your username and password</p>
 								</div>
@@ -177,9 +177,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-lg-center">
 						<div class="d-flex flex-column justify-content-center">
-							<h4 class="display-3 font-weight-bold my-7 text-white">SHS-ANHS SOA</h4>
+							<h4 class="display-3 font-weight-bold my-7 text-white">LSSTI</h4>
 							<p class="font-weight-bold font-size-lg text-white">
-							<br />Student Online Attendance with Biometric System</p>
+							<br />Student Event Attendance with Biometric System</p>
 						</div>
 					</div>
 					<!--end::Content body-->

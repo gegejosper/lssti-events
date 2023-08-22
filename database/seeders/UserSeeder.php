@@ -22,36 +22,27 @@ class UserSeeder extends Seeder
         User::truncate();
         DB::table('role_user')->truncate();
         $admin_role = Role::where('name', 'admin')->first();
-        $teacher_role = Role::where('name', 'teacher')->first();
         $student_role = Role::where('name', 'student')->first();
 
         $admin = User::create([
             'name' => 'admin',
             'username' => 'admin',
-            'email' => 'admin@ansh-soa.com',
+            'email' => 'admin@lssti.com',
             'password' => Hash::make('password'),
+            'usertype' => 'admin',
             'status' => 'active'
         ]);
         $insert_role_admin = Role_user::create([
             'role_id' => $admin_role->id,
             'user_id' => $admin->id
         ]);
-        $teacher = User::create([
-            'name' => 'teacher',
-            'username' => 'teacher',
-            'email' => 'teacher@ansh-soa.com',
-            'password' => Hash::make('password'),
-            'status' => 'active'
-        ]);
-        $insert_role_teacher = Role_user::create([
-            'role_id' => $teacher_role->id,
-            'user_id' => $teacher->id
-        ]);
+
         $student = User::create([
-            'name' => 'staff',
-            'username' => 'staff',
-            'email' => 'student@ansh-soa.com',
+            'name' => 'student',
+            'username' => 'student',
+            'email' => 'student@lssti.com',
             'password' => Hash::make('password'),
+            'usertype' => 'student',
             'status' => 'active'
         ]);
         $insert_role_student = Role_user::create([
@@ -60,7 +51,6 @@ class UserSeeder extends Seeder
         ]);
         
         $admin->roles()->attach($admin_role);
-        $teacher->roles()->attach($teacher_role);
         $student->roles()->attach($student_role);
     }
 }

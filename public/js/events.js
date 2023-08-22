@@ -1,32 +1,34 @@
 $(document).ready(function() {
-    $(document).on('click', '.add-student', function() {
-        $('#addStudentModal').modal('show');
+    $(document).on('click', '.add-event', function() {
+        $('#addEventModal').modal('show');
+        console.log('Clicked');
     });
     $(document).on('click', '.closemodify', function() {
         location.reload();
     });
+    
 
-    $(document).on('click', '.modify-student', function() {
-        $('#student_modify_id').val($(this).data('student_id'));
-        $('#student_modify_status').val($(this).data('student_status'));
-        $('#modifyStudentModal').modal('show');
+    $(document).on('click', '.modify-event', function() {
+        $('#event_modify_id').val($(this).data('event_id'));
+        $('#event_modify_status').val($(this).data('event_status'));
+        $('#modifyEventModal').modal('show');
     });
     
-    $('.modal-footer').on('click', '#modifyStudent', function() {
+    $('.modal-footer').on('click', '#modifyEvent', function() {
   
         $.ajax({
             type: 'post',
-            url: '/panel/admin/student/modify',
+            url: '/panel/admin/event/modify',
             data: {
                 //_token:$(this).data('token'),
                 '_token': $('input[name=_token]').val(),
-                'student_id': $('input[name=student_modify_id]').val(),
-                'student_status': $('input[name=student_modify_status]').val()
+                'event_id': $('input[name=event_modify_id]').val(),
+                'event_status': $('input[name=event_modify_status]').val()
                 
             },
             success: function(data) {
-                $('#modifyStudentModal').modal('toggle');
-                $('#modifyStudentModalSuccess').modal('show');
+                $('#modifyEventModal').modal('toggle');
+                $('#modifyEventModalSuccess').modal('show');
                 
             },
             
@@ -44,57 +46,54 @@ $(document).ready(function() {
         });
     });
 
-    $(document).on('click', '.edit-student', function() {
-        $('#edit_fname').val($(this).data('fname'));
-        $('#edit_lname').val($(this).data('lname'));
-        $('#edit_contact_number').val($(this).data('contact_number'));
-        $('#edit_address').val($(this).data('address'));
-        $('#edit_student_id').val($(this).data('student_id'));
-        $('#editStudentModal').modal('show');
+
+    $(document).on('click', '.edit-event', function() {
+        $('#edit_event_name').val($(this).data('event_name'));
+        $('#edit_event_id').val($(this).data('event_id'));
+        $('#editEventModal').modal('show');
     });
-    $('.modal-footer').on('click', '#editStudent', function() {
+    $('.modal-footer').on('click', '#editEvent', function() {
   
           $.ajax({
               type: 'post',
-              url: '/panel/admin/student/update',
+              url: '/panel/admin/event/update',
               data: {
                   //_token:$(this).data('token'),
                   '_token': $('input[name=_token]').val(),
-                  'fname': $('input[name=edit_fname]').val(),
-                  'lname': $('select[name=edit_lname]').val(),
-                  'contact_number': $('input[name=edit_contact_number]').val(),
-                  'address': $('select[name=edit_address]').val(),
-                  'student_id': $('input[name=edit_student_id]').val()
+                  'event_name': $('input[name=edit_event_name]').val(),
+                  'event_date': $('input[name=edit_event_date]').val(),
+                  'event_id': $('input[name=edit_event_id]').val()
               },
               success: function(data) {
-                $('#editStudentModal').modal('toggle');
+                $('#editEventModal').modal('toggle');
                 
                 $('.row'+ data.id).replaceWith(`
                 <tr class="row${data.id}">
                     <td class="py-8">
                         <div class="d-flex align-items-center">
                             <div>
-                            ${data.first_name} ${data.last_name}
+                                ${data.event_name}
+                                
                             </div>
                         </div>
                     </td>
-                    <td>${data.contact_number}</td>
-                    <td>${data.address}</td>
+                    <td>
+                        <strong>${data.event_date}</strong>
+                    </td>
                     <td>
                         <strong>${data.status}</strong>
                     </td>
                     <td class="pr-0 text-right">
-                    <a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-student"
-                        data-student_id="${data.id}"
-                        data-fname="${data.fname}"
-                        data-lname="${data.lname}"
-                        data-contact_number="${data.contact_number}"
-                        data-address="${data.address}"
+                    <a href="/panel/admin/event/${data.id}" class="btn btn-light-success font-weight-bolder font-size-sm"><i class="fas fa-search"></i></a>
+                    <a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-event"
+                        data-event_id="${data.id}"
+                        data-event_name="${data.event_name}"
+                        data-event_date="${data.event_date}"
                     ><i class="fas fa-pen"></i></a>
                     
-                    <a href="javascript:;" id="modifystudent${data.id}" class="btn btn-sm btn-warning modify-student"
-                        data-student_id="${data.id}"
-                        data-student_status="inactive">
+                    <a href="javascript:;" id="modifyevent${data.id}" class="btn btn-sm btn-warning modify-event"
+                        data-event_id="${data.id}"
+                        data-event_status="inactive">
                         <i class="far fa-eye-slash"></i>
                     </a>
                     
@@ -118,7 +117,7 @@ $(document).ready(function() {
                     "showMethod": "fadeIn",
                     "hideMethod": "fadeOut"
                   };
-                toastr.success("Student updated...");
+                toastr.success("Event updated...");
               },
               
               error: function(data){
@@ -135,72 +134,54 @@ $(document).ready(function() {
           });
     });
     
-    $(document).on('submit', '#form_student', function(e) {
-        e.preventDefault();
-        console.log(e);
+    $("#addEvent").click(function(data) {
           $.ajax({
               type: 'post',
-              url: '/panel/admin/student/add',
+              url: '/panel/admin/event/add',
               data: {
                   '_token': $('input[name=_token]').val(),
-                  'id_number': $('input[name=id_number]').val(),
-                  'first_name': $('input[name=fname]').val(),
-                  'middle_name': $('input[name=mname]').val(),
-                  'last_name': $('input[name=lname]').val(),
-                  'course': $('select[name=course]').val(),
-                  'gender': $('select[name=gender]').val(),
-                  'contact_number': $('input[name=contact_number]').val(),
-                  'address': $('input[name=address]').val()
+                  'event_name': $('input[name=event_name]').val(),
+                  'event_date': $('input[name=event_date]').val()
               },
               success: function(data) {
-                $('#studentTable').prepend(`
+                $('#eventTable').append(`
                     <tr class="row${data.id}">
                         <td class="py-8">
                             <div class="d-flex align-items-center">
                                 <div>
-                                    ${data.id_number}
+                                    <a href="/panel/admin/event/${data.id}" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">${data.event_name}</a>
                                 </div>
                             </div>
                         </td>
-                        <td class="py-8">
-                            <div class="d-flex align-items-center">
-                                <div>
-                                    <a href="/panel/admin/student/${data.id}" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">${data.first_name} ${data.last_name}</a>
-                                </div>
-                            </div>
+                        <td>
+                            <strong>${data.event_date}</strong>
                         </td>
-                        <td>${data.address}</td>
-                        <td>${data.contact_number}</td>
-                        
                         <td>
                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">${data.status}</span>
                             
                         </td>
                         
                         <td class="pr-0 text-right">
-                            <a href="/panel/admin/student/${data.id}" class="btn btn-light-success font-weight-bolder font-size-sm btn-sm"><i class="fas fa-search"></i></a>
-                        <a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-student btn-sm"
-                            data-student_id="${data.id}"
-                            data-student="${data.name}"
+                            <a href="/panel/admin/event/${data.id}" class="btn btn-light-success font-weight-bolder font-size-sm"><i class="fas fa-search"></i></a>
+                        <a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-event"
+                            data-event_id="${data.id}"
+                            data-event_name="${data.event_name}"
+                            data-event_date="${data.event_date}"
     
                         ><i class="fas fa-pen"></i></a>
                         
-                        <a href="javascript:;" id="modifystudent${data.id}" class="btn btn-sm btn-warning modify-student btn-sm"
-                            data-student_id="${data.id}"
-                            data-student_status="inactive">
+                        <a href="javascript:;" id="modifyevent${data.id}" class="btn btn-sm btn-warning modify-event"
+                            data-event_id="${data.id}"
+                            data-event_status="inactive">
                             <i class="far fa-eye-slash"></i>
                         </a>
                         
                         </td>
                     </tr>
                 `);
-                $('#fname').val('');
-                $('#mname').val('');
-                $('#lname').val('');
-                $('#id_number').val('');
-                $('#contact_number').val('');
-                $('#address').val('');
-                $('#addStudentModal').modal('toggle');
+                $('#event').val('');
+
+                $('#addEventModal').modal('toggle');
                 toastr.options = {
                     "closeButton": false,
                     "debug": false,
@@ -218,7 +199,7 @@ $(document).ready(function() {
                     "showMethod": "fadeIn",
                     "hideMethod": "fadeOut"
                 };
-                toastr.success("Student added");
+                toastr.success("School year added");
               },
               error: function(data){
                 var errors = data.responseJSON.errors;

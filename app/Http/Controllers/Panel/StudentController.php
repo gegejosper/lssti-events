@@ -21,12 +21,13 @@ class StudentController extends Controller
 {
     //
     public function student_add(Request $req){
-        $strand = Strand::find($req->strand);
             //dd($strand);
         $validator = Validator::make($req->all(), [
             'first_name' => 'required',
             'last_name' => 'required',
+            'middle_name' => 'required',
             'contact_number' => 'required',
+            'gender' => 'required',
             'address' => 'required'
 
         ]);
@@ -43,26 +44,14 @@ class StudentController extends Controller
             $student_info->id_number = $req->id_number;
             $student_info->first_name = strtoupper($req->first_name);
             $student_info->last_name =strtoupper($req->last_name);
-            $student_info->parent_name = strtoupper($req->parent_name);
+            $student_info->middle_name =strtoupper($req->middle_name);
             $student_info->contact_number = $req->contact_number;
             $student_info->address = $req->address;
-            $student_info->strand = $req->strand;
-            $student_info->track =$strand->track;
             $student_info->gender =$req->gender;
-            $student_info->grade_year =$req->grade;
-            $student_info->section =$req->section;
+            $student_info->course =$req->course;
             $student_info->status ='active';
-            $student_info->user_id =0;
+            $student_info->user_id = 0;
             $student_info->save();
-
-            $sc = School_year::where('status', 'active')->latest()->first();
-            $sc_students = new Students_schoolyear();
-            $sc_students->schoolyear = $sc->cy;  
-            $sc_students->semester =$sc->semester;  
-            $sc_students->student_id =$student_info->id;  
-            $sc_students->section_id =$student_info->section; 
-            $sc_students->status= 'active';   
-            $sc_students->save();  
 
             $student_role = Role::where('name', 'student')->first();
             $student = User::create([
@@ -81,8 +70,8 @@ class StudentController extends Controller
             $data = Student::find($student_info->id);
             $data->user_id = $student->id;
             $data->save();
-            //$student->roles()->attach($student_role);
-
+            $student->roles()->attach($student_role);
+            //dd($student);
             return response()->json($student_info);
         }
     }

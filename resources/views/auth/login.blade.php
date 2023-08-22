@@ -15,8 +15,8 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../../../">
 		<meta charset="utf-8" />
-		<title>ANHS | Student Online Attendance</title>
-		<meta name="description" content="Login page example" />
+		<title>LSSTI | Student Event Attendance</title>
+		<meta name="description" content="Student Event Attendance" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
@@ -52,7 +52,7 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Aside body-->
 						<div class="d-flex flex-column-fluid flex-column flex-center mt-5 mt-lg-0">
 							<a href="/" class="mb-0 text-center">
-								<img src="{{asset('assets/media/anhs-logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
+								<img src="{{asset('assets/media/lssti_logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
 							</a>
 							<!--begin::Signin-->
 							<div class="login-form login-signin">

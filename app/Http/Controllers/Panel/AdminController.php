@@ -8,15 +8,11 @@ use App\Models\Attendance;
 use App\Models\Message;
 use App\Models\User;
 use App\Models\Role;
-use App\Models\School_year;
-use App\Models\Strand;
+use App\Models\Course;
+use App\Models\Event;
 use App\Models\Section;
 use App\Models\Setting;
-use App\Models\Student_subject;
 use App\Models\Student;
-use App\Models\Subject;
-use App\Models\Subject_attendance;
-use App\Models\Teacher;
 use App\Models\Gate_attendance;
 use App\Models\Attendance_setup;
 use Illuminate\Support\Facades\Session;
@@ -27,25 +23,10 @@ class AdminController extends Controller
     //
     public function dashboard(){
         $page_name = 'Dashboard';
-        $gate_logged = Gate_attendance::with('student')->latest()->take(10)->get();
         $students = Student::where('status', 'active')->count();
-        $male_students = Student::where('gender', 'MALE')->where('status', 'active')->count();
-        $female_students = Student::where('gender', 'FEMALE')->where('status', 'active')->count();
-        $grade11_students = Student::where('grade_year', 'Grade-11')->where('status', 'active')->count();
-        $grade12_students = Student::where('grade_year', 'Grade-12')->where('status', 'active')->count();
-        
-        $grade12_students_female = Student::where('grade_year', 'Grade-12')->where('status', 'active')->where('gender', 'FEMALE')->count();
-        $grade12_students_male = Student::where('grade_year', 'Grade-12')->where('status', 'active')->where('gender', 'MALE')->count();
-        $grade11_students_female = Student::where('grade_year', 'Grade-11')->where('status', 'active')->where('gender', 'FEMALE')->count();
-        $grade11_students_male = Student::where('grade_year', 'Grade-11')->where('status', 'active')->where('gender', 'MALE')->count();
-
-
+       
         $today = date('Y-m-d');
-        $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
-        $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
-        return view('panel.admin.dashboard',compact('page_name', 'gate_logged', 'students', 'gate_logged_count', 
-        'male_students', 'female_students', 'grade11_students', 'grade12_students', 'grade12_students_female', 'grade12_students_male',
-        'grade11_students_female', 'grade11_students_male'));
+        return view('panel.admin.dashboard',compact('page_name', 'students'));
     }
 
     public function logs(){
@@ -139,37 +120,21 @@ class AdminController extends Controller
         return view('panel.admin.school_year',compact('page_name', 'school_years'));
     }
 
-    public function strand(){
-        $page_name = 'Strand';
-        $strands = Strand::all();
-        return view('panel.admin.strand',compact('page_name', 'strands'));
-    }
-
-    public function subjects(){
-        $page_name = 'Subjects';
-        $subjects = Subject::all();
-        return view('panel.admin.subjects',compact('page_name', 'subjects'));
-    }
-
-    public function sections(){
-        $page_name = 'Strand';
-        $sections = Section::all();
-        return view('panel.admin.sections',compact('page_name', 'sections'));
-    }
-
-    public function teachers(){
-        $page_name = 'Teachers';
-        $teachers = Teacher::all();
-        return view('panel.admin.teachers',compact('page_name', 'teachers'));
-    }
-
     public function students(){
         $page_name = 'Students';
         $students = Student::latest()->get();
-        $school_years =School_year::get();
-        $sections = Section::where('grade_year', 'Grade-11')->where('status', 'active')->get();
-        $strands = Strand::where('status', 'active')->get();
-        return view('panel.admin.students',compact('page_name', 'students', 'strands', 'sections', 'school_years'));
+        $courses = Course::where('status', 'active')->get();
+        return view('panel.admin.students',compact('page_name', 'students', 'courses'));
+    }
+    public function courses(){
+        $page_name = 'Courses';
+        $courses = Course::get();
+        return view('panel.admin.courses',compact('page_name', 'courses'));
+    }
+    public function events(){
+        $page_name = 'Events';
+        $events = Event::get();
+        return view('panel.admin.events',compact('page_name', 'events'));
     }
     public function setup(){
         $settings = Setting::first();
