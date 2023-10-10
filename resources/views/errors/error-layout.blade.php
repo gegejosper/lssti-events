@@ -31,7 +31,7 @@
 		<!--end::Global Theme Styles-->
 		<!--begin::Layout Themes(used by all pages)-->
 		<!--end::Layout Themes-->
-        <link rel="shortcut icon" href="{{asset('assets/media/anhs-logo.png')}}" />
+        <link rel="shortcut icon" href="{{asset('assets/media/lssti_logo.png')}}" />
         <style>
             html, body {
                 background-color: #fff;
@@ -80,7 +80,7 @@
 					<div class="d-flex flex-row-fluid flex-column justify-content-between">
 						<!--begin::Logo-->
 						<a href="/" class="text-center pt-2">
-						<img src="{{asset('assets/media/anhs-logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
+						<img src="{{asset('assets/media/lssti_logo.png')}}" style="width:350px;"/>
 						</a>
 						<!--end::Logo-->
 						<!--begin::Aside body-->

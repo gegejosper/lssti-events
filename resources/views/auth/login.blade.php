@@ -15,8 +15,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!--begin::Head-->
 	<head><base href="../../../../">
 		<meta charset="utf-8" />
-		<title>LSSTI | Student Event Attendance</title>
-		<meta name="description" content="Student Event Attendance" />
+		<title>LSSTI | Student Event Attendance with Biometric System</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<link rel="canonical" href="https://keenthemes.com/metronic" />
 		<!--begin::Fonts-->
@@ -52,12 +51,12 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--begin::Aside body-->
 						<div class="d-flex flex-column-fluid flex-column flex-center mt-5 mt-lg-0">
 							<a href="/" class="mb-0 text-center">
-								<img src="{{asset('assets/media/lssti_logo.png')}}" class="max-h-250px" alt="" style="width:350px;"/>
+								<img src="{{asset('assets/media/lssti_logo.png')}}" class="max-h-250px" alt="" style="width:250px;"/>
 							</a>
 							<!--begin::Signin-->
 							<div class="login-form login-signin">
                                     
-                                <div class="text-center mb-10 mb-lg-20">
+                                <div class="text-center mb-10 mt-10 mb-lg-20">
 									<h2 class="font-weight-bold">Sign In</h2>
 									<p class="text-muted font-weight-bold">Enter your username and password</p>
 								</div>
@@ -159,12 +158,8 @@ License: You must have a valid license purchased only from themeforest(the above
 						<!--end::Aside body-->
 						<!--begin: Aside footer for desktop-->
 						<div class="d-flex flex-column-auto justify-content-between mt-15">
-							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2021 ANHS-SOA</div>
-							<div class="d-flex order-1 order-sm-2 my-2">
-								<a href="#" class="text-muted text-hover-primary">Privacy</a>
-								<a href="#" class="text-muted text-hover-primary ml-4">Legal</a>
-								<a href="#" class="text-muted text-hover-primary ml-4">Contact</a>
-							</div>
+							<div class="text-dark-50 font-weight-bold order-2 order-sm-1 my-2">© 2023 LSSTI-SEA</div>
+
 						</div>
 						<!--end: Aside footer for desktop-->
 					</div>
@@ -177,9 +172,9 @@ License: You must have a valid license purchased only from themeforest(the above
 					<!--begin::Content body-->
 					<div class="d-flex flex-column-fluid flex-lg-center">
 						<div class="d-flex flex-column justify-content-center">
-							<h4 class="display-3 font-weight-bold my-7 text-white">SHS-ANHS SOA</h4>
+							<h4 class="display-3 font-weight-bold my-7 text-white">LSSTI</h4>
 							<p class="font-weight-bold font-size-lg text-white">
-							<br />Student Online Attendance with Biometric System</p>
+							<br />Student Event Attendance with Biometric System</p>
 						</div>
 					</div>
 					<!--end::Content body-->

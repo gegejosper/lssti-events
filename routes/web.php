@@ -14,9 +14,7 @@ use Illuminate\Support\Str;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'FrontController@index');
 Route::get('/apply', 'FrontController@apply');
 Route::get('/generate_token', function(){
     $api_token = Str::random(60);
