@@ -28,5 +28,10 @@ class FrontController extends Controller
         
         return view('welcome', compact('logtype'))->with('success','Attendance list updated.');
     }
+    public function update_log_type($logtype){
+        $update_log_type = Logtype::where('id', '=', 1)
+            ->update(['log_type' => $logtype]);
+        return redirect()->back()->with('success','Attendance logtype updated');
+    }
 }
 
