@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Att_punch;
 use App\Models\Logtype;
+use Illuminate\Support\Facades\Http;
 
 class FrontController extends Controller
 {
