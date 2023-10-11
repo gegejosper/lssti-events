@@ -20,6 +20,7 @@ Route::get('/generate_token', function(){
     $api_token = Str::random(60);
     return $api_token;
 });
+Route::get('/update/log/{logtype}', 'FrontController@update_log_type');
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
