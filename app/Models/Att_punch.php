@@ -12,6 +12,6 @@ class Att_punch extends Model
     public $timestamps = false;
 
     public function student(){
-        return $this->belongsTo('App\Models\Student', 'employee_id', 'id');
+        return $this->belongsTo('App\Models\Hr_employee', 'employee_id', 'id');
     }
 }

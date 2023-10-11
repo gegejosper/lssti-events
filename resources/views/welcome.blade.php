@@ -52,21 +52,16 @@
             </div>
         @endif
         <div class="logo">
-            <img src="{{asset('assets/media/lssti_logo.png')}}" alt=""> <br>
+            <img src="{{asset('assets/media/lssti_logo.png')}}" alt="" width="100"> <br>
             @php 
             switch ($logtype->log_type) {
                 case 0:
-                $log_type="AM Login";
+                $log_type="Login";
                 break;
                 case 1:
-                    $log_type="AM Logout";
+                    $log_type="Logout";
                 break;
-                case 2:
-                    $log_type="PM Login";
-                break;
-                case 3:
-                    $log_type="PM Logout";
-                break;
+               
                 default:
                     $log_type="Error";
             }
@@ -76,10 +71,8 @@
             
         </div>
         <div class="row button" style="width:600px">
-            <div class="col-lg-3"><a href="/update/log/0" class="btn btn-info">AM Login</a></div>
-            <div class="col-lg-3"><a href="/update/log/1" class="btn btn-success">AM Logout</a></div>
-            <div class="col-lg-3"><a href="/update/log/2" class="btn btn-warning">PM Login</a></div>
-            <div class="col-lg-3"><a href="/update/log/3" class="btn btn-danger">PM Logout</a></div>
+            <div class="col-lg-3"><a href="/update/log/0" class="btn btn-info">Login</a></div>
+            <div class="col-lg-3"><a href="/update/log/1" class="btn btn-success">Logout</a></div>
         </div>
         
         <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
