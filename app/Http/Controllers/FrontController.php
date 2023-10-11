@@ -10,6 +10,9 @@ use App\Models\Logtype;
 class FrontController extends Controller
 {
     //
+
+    protected $url = 'http://lsstievents.com';
+    
     public function apply(){
         return view('apply');
     }
