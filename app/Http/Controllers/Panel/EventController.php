@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Panel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Gate_attendance;
 use Response;
 use Validator;
 
@@ -58,5 +59,12 @@ class EventController extends Controller
             $data->save();
             return response()->json($data);
         }
+    }
+    public function view_event($event_id){
+        $page_name = 'Event Report';
+        $event = Event::find($event_id);
+        $gate_logged = Gate_attendance::with('student', 'event_detail')->where('event', $event_id)->latest()->get();
+        return view('panel.admin.reports.event',compact('page_name', 'gate_logged', 'event'));
+        
     }
 }

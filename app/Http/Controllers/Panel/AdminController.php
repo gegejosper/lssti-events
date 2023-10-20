@@ -35,12 +35,10 @@ class AdminController extends Controller
         $students = Student::where('status', 'active')->count();
         $male_students = Student::where('gender', 'MALE')->where('status', 'active')->count();
         $female_students = Student::where('gender', 'FEMALE')->where('status', 'active')->count();
-        $grade11_students = Student::where('grade_year', 'Grade-11')->where('status', 'active')->count();
-        $grade12_students = Student::where('grade_year', 'Grade-12')->where('status', 'active')->count();
         $today = date('Y-m-d');
         $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
         $gate_logged_count = Gate_attendance::where('date_log', $today)->with('student')->count();
-        return view('panel.admin.logs',compact('page_name', 'gate_logged', 'students', 'gate_logged_count', 'male_students', 'female_students', 'grade11_students', 'grade12_students'));
+        return view('panel.admin.logs',compact('page_name', 'gate_logged', 'students', 'gate_logged_count', 'male_students', 'female_students'));
     }
 
     public function users(){
@@ -169,8 +167,6 @@ class AdminController extends Controller
         return redirect()->back()->with('success_attendance_setting','School setting updated');
     }
     public function gate_attendance(Request $req){
-        
-        
         $page_name = 'Attendance';
         if(isset($req->date_log)){
             $today = $req->date_log;
@@ -201,5 +197,10 @@ class AdminController extends Controller
         ->paginate(200);
         //dd($students);
         return view ('panel.admin.gate-attendance', compact('page_name', 'today', 'students'));
+    }
+    public function reports(){
+        $page_name = 'Dashboard';
+        $gate_logged = Gate_attendance::with('student', 'event_detail')->latest()->get();
+        return view('panel.admin.reports.log-report',compact('page_name', 'gate_logged'));
     }
 }

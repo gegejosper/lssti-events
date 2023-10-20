@@ -232,6 +232,6 @@
 @endsection
 
 @section('jslinks')
-<script src="{{asset('js/school_years.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>  
+<script src="{{secure_asset('js/school_years.js')}}"></script>
+<script src="{{secure_asset('js/app.js')}}"></script>  
 @endsection

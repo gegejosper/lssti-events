@@ -78,7 +78,7 @@ $(document).ready(function() {
                             </div>
                         </div>
                     </td>
-                    <td>${data.contact_number}</td>
+                    <td>${data.course}</td>
                     <td>${data.address}</td>
                     <td>
                         <strong>${data.status}</strong>
@@ -169,7 +169,7 @@ $(document).ready(function() {
                                 </div>
                             </div>
                         </td>
-                        <td>${data.address}</td>
+                        <td>${data.course}</td>
                         <td>${data.contact_number}</td>
                         
                         <td>

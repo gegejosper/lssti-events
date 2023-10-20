@@ -48,7 +48,7 @@ class StudentController extends Controller
             $student_info->contact_number = $req->contact_number;
             $student_info->address = $req->address;
             $student_info->gender =$req->gender;
-            $student_info->course =$req->course;
+            $student_info->course = $req->course;
             $student_info->status ='active';
             $student_info->user_id = 0;
             $student_info->save();
@@ -69,7 +69,9 @@ class StudentController extends Controller
 
             $data = Student::find($student_info->id);
             $data->user_id = $student->id;
+            
             $data->save();
+            
             $student->roles()->attach($student_role);
             //dd($student);
             return response()->json($student_info);

@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Bootstrap 4 HTML, React, Angular 11 & VueJS Admin Dashboard Theme
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: https://1.envato.market/EA4JP
-Renew Support: https://1.envato.market/EA4JP
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="../../../../">
@@ -35,7 +23,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{asset('assets/css/themes/layout/brand/dark.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
 		<!--end::Layout Themes-->
-		<link rel="shortcut icon" href="{{asset('assets/media/anhs-logo.png')}}" />
+		<link rel="shortcut icon" href="{{asset('assets/media/lssti_logo.png')}}" />
 	</head>
 	<!--end::Head-->
 	<!--begin::Body-->
@@ -71,7 +59,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                  @endif
                                 
                                 
-								<form class="form" novalidate="novalidate" id="kt_login_forgot_form" method="POST" action="{{ route('login') }}">
+								<form class="form" novalidate="novalidate" id="kt_login_forgot_form" method="POST" action="{{ secure_url('login') }}">
                                     @csrf
 									<div class="form-group py-3 m-0">
 										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="Username" placeholder="Username" name="username" autocomplete="off" />

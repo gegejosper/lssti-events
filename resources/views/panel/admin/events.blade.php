@@ -55,7 +55,7 @@
 												</td>
 												
 												<td class="pr-0">
-                                                <a href="/panel/admin/event/{$event->id}" class="btn btn-light-success font-weight-bolder font-size-sm"><i class="fas fa-search"></i></a>
+                                                <a href="/panel/admin/events/{{$event->id}}" class="btn btn-light-success font-weight-bolder font-size-sm"><i class="fas fa-folder"></i></a>
 												<a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-event"
 													data-event_id="{{$event->id}}"
 													data-event_name="{{$event->event_name}}"
@@ -87,6 +87,7 @@
 						<!--end::Body-->
 					</div>
 					<!--end::Advance Table Widget 4-->
+                    <button class="btn btn-info no-print" onclick="window.print();"><i class="fas fa-print"></i>  Print</button>
 				</div>
 			</div>
 			<!--end::Row-->
@@ -226,6 +227,6 @@
 @endsection
 
 @section('jslinks')
-<script src="{{asset('js/events.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>  
+<script src="{{secure_asset('js/events.js')}}"></script>
+<script src="{{secure_asset('js/app.js')}}"></script>  
 @endsection

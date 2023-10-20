@@ -214,6 +214,6 @@
         </div>
     </div>
 </div>
-<script src="{{asset('js/app.js')}}"></script>  
-<script src="{{asset('js/users.js')}}"></script>
+<script src="{{secure_asset('js/app.js')}}"></script>  
+<script src="{{secure_asset('js/users.js')}}"></script>
 @endsection

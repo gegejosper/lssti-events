@@ -254,6 +254,6 @@
 @endsection
 
 @section('jslinks')
-<script src="{{asset('js/sections.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>  
+<script src="{{secure_asset('js/sections.js')}}"></script>
+<script src="{{secure_asset('js/app.js')}}"></script>  
 @endsection

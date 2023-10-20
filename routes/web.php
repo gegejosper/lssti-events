@@ -32,6 +32,7 @@ Route::namespace('Panel')->prefix('panel')->name('panel.')->group(function() {
         Route::get('/school_year', 'AdminController@school_year')->name('school_year');
         Route::get('/setup', 'AdminController@setup')->name('setup');
         Route::get('/logs', 'AdminController@logs')->name('logs');
+        Route::get('/reports', 'AdminController@reports')->name('logs');
         Route::post('/setup/save', 'AdminController@save_setup')->name('save_setup');
         Route::post('/setup/save_attendance_setup', 'AdminController@save_attendance_setup')->name('save_attendance_setup');
         Route::post('/school_year/add', 'SchoolYearController@school_year_add')->name('school_year_add');
@@ -44,6 +45,7 @@ Route::namespace('Panel')->prefix('panel')->name('panel.')->group(function() {
         Route::post('/course/update', 'CourseController@course_update')->name('course_update');
 
         Route::get('/events', 'AdminController@events')->name('events');
+        Route::get('/events/{event_id}', 'EventController@view_event')->name('view_event');
         Route::post('/event/add', 'EventController@event_add')->name('event_add');
         Route::post('/event/modify', 'EventController@event_modify')->name('event_modify');
         Route::post('/event/update', 'EventController@event_update')->name('event_update');

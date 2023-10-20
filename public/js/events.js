@@ -84,7 +84,7 @@ $(document).ready(function() {
                         <strong>${data.status}</strong>
                     </td>
                     <td class="pr-0 text-right">
-                    <a href="/panel/admin/event/${data.id}" class="btn btn-light-success font-weight-bolder font-size-sm"><i class="fas fa-search"></i></a>
+                    <a href="/panel/admin/event/${data.id}" class="btn btn-light-success font-weight-bolder font-size-sm"><i class="fas fa-folder"></i></a>
                     <a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-event"
                         data-event_id="${data.id}"
                         data-event_name="${data.event_name}"

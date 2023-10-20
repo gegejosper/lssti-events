@@ -132,6 +132,6 @@
 
     });
 </script>
-<script src="{{asset('js/students.js')}}"></script>
-<script src="{{asset('js/app.js')}}"></script>  
+<script src="{{secure_asset('js/students.js')}}"></script>
+<script src="{{secure_asset('js/app.js')}}"></script>  
 @endsection
