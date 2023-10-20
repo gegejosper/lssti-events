@@ -9,18 +9,19 @@
 			
 			<!--begin::Row-->
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-lg-6">
+                    
 					<!--begin::Advance Table Widget 4-->
 					<div class="card card-custom card-stretch gutter-b">
 						<!--begin::Header-->
 						<div class="card-header border-0 py-5">
 							<h3 class="card-title align-items-start flex-column">
-								<span class="card-label font-weight-bolder text-dark">Users</span>
-								<span class="text-muted mt-3 font-weight-bold font-size-sm">List of ANHS-SOA  users listed here.</span>
+								<span class="card-label font-weight-bolder text-dark">Modify User Data</span>
+								
 							</h3>
-							<!-- <div class="card-toolbar">
-								<a href="#" class="btn btn-primary font-weight-bolder font-size-sm mr-3"><i class="fas fa-plus"></i> New User</a>
-							</div> -->
+							<div class="card-toolbar">
+								<a href="/panel/admin/settings/users" class="btn btn-sm btn-primary font-weight-bolder font-size-sm mr-3"><i class="fas fa-reply"></i> Back</a>
+							</div>
 						</div>
 						<!--end::Header-->
 						<!--begin::Body-->
@@ -62,10 +63,21 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
+                                        <label for="username" class="col-md-4 col-form-label text-md-right">Username</label>
+                                        <div class="col-md-6">
+                                            <input id="name" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ $user->username }}" required autocomplete="name" autofocus>
+                                            @error('username')
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
+                                            @enderror
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Password</label>
                                         <div class="col-md-6">
                                             <input id="password" type="text" class="form-control @error('name') is-invalid @enderror" name="password" placeholder="Leave blank if not changing" autocomplete="password" autofocus>
-                                            @error('name')
+                                            @error('password')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
@@ -90,7 +102,7 @@
                                     <div class="form-group row justify-content-center">
                                         <div class="col-md-6">
                                         <input type="hidden" name="user_id" value="{{$user->id}}">
-                                        <button type="submit" class="btn btn-primary btn-sm">Update </button>
+                                        <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-save"></i> Update </button>
                                         </div>
                                     </div>
                                     
