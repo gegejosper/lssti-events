@@ -15,10 +15,10 @@
 						<!--begin::Header-->
 						<div class="card-header border-0 py-5">
 							<h3 class="card-title align-items-start flex-column">
-								<span class="card-label font-weight-bolder text-dark">Courses</span>
+								<span class="card-label font-weight-bolder text-dark">Department</span>
 							</h3>
 							<div class="card-toolbar">
-								<a href="javascript:;" class="btn btn-primary font-weight-bolder font-size-sm mr-3 add-course" data-toggle="modal"><i class="fas fa-plus"></i> New Course</a>
+								<a href="javascript:;" class="btn btn-primary font-weight-bolder font-size-sm mr-3 add-course" data-toggle="modal"><i class="fas fa-plus"></i> New Department</a>
 							</div>
 						</div>
 						<!--end::Header-->
@@ -101,7 +101,7 @@
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">New Course</h5>
+                <h5 class="modal-title" id="exampleModalLabel">New Department</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
@@ -112,19 +112,19 @@
                 <div class="card-body">
 					<div class="">
                         <div class="form-group row">
-                            <label class="col-lg-2 col-form-label">Course</label>
+                            <label class="col-lg-2 col-form-label">Department</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" placeholder="Course name" name="course_name" id="course_name">
+                                <input type="text" class="form-control" placeholder="Department name" name="course_name" id="course_name">
                                 <span class="form-text text-muted">Please enter course name</span>
                             </div>
                         </div>
                     </div>
                     <div class="">
                         <div class="form-group row">
-                            <label class="col-lg-2 col-form-label">Course Code</label>
+                            <label class="col-lg-2 col-form-label">Department Code</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" placeholder="Course code" name="course_code" id="course_code">
-                                <span class="form-text text-muted">Please enter course code</span>
+                                <input type="text" class="form-control" placeholder="Department code" name="course_code" id="course_code">
+                                <span class="form-text text-muted">Please enter department code</span>
                             </div>
                         </div>
                     </div>
@@ -141,7 +141,7 @@
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Edit Course</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Department</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
@@ -152,20 +152,20 @@
                 <div class="card-body p-0">
                     <div class="">
 						<div class="form-group row">
-                            <label class="col-lg-2 col-form-label">Course</label>
+                            <label class="col-lg-2 col-form-label">Department</label>
                             <div class="col-lg-10">
                                 <input type="text" class="form-control" placeholder="" name="edit_course_name" id="edit_course_name">
-                                <span class="form-text text-muted">Please enter course name</span>
+                                <span class="form-text text-muted">Please enter department name</span>
                             </div>
                         </div>
                         
                     </div>
                     <div class="">
                         <div class="form-group row">
-                            <label class="col-lg-2 col-form-label">Course Code</label>
+                            <label class="col-lg-2 col-form-label">Department Code</label>
                             <div class="col-lg-10">
-                                <input type="text" class="form-control" placeholder="Course code" name="edit_course_code" id="edit_course_code">
-                                <span class="form-text text-muted">Please enter course code</span>
+                                <input type="text" class="form-control" placeholder="Department code" name="edit_course_code" id="edit_course_code">
+                                <span class="form-text text-muted">Please enter department code</span>
                             </div>
                         </div>
                     </div>
@@ -183,14 +183,14 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modify Course</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Modify Department</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
             </div>
             <div class="modal-body">
                 @csrf
-                <div class="alert alert-danger" role="alert"> Are you sure you want activate/deactivate this course?</div>
+                <div class="alert alert-danger" role="alert"> Are you sure you want activate/deactivate this department?</div>
             </div>
             <div class="modal-footer">
             <input type="hidden" class="form-control" name="course_modify_id" id="course_modify_id">
@@ -205,13 +205,13 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modify Course</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Modify Department</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <i aria-hidden="true" class="ki ki-close"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="alert alert-success" role="alert"> Course modified</div>
+                <div class="alert alert-success" role="alert"> Department modified</div>
             </div>
             <div class="modal-footer">
            

@@ -37,7 +37,7 @@
 												<th style="" class="pl-7">
 													<span class="text-dark-75">Name</span>
 												</th>
-												<th>Course</th>
+												<th>Department</th>
                                                 <th>Contact Number</th>
                         
 												<th style="min-width: 100px">Status</th>

@@ -187,7 +187,7 @@ License: You must have a valid license purchased only from themeforest(the above
 											</g>
 											</svg><!--end::Svg Icon-->
 										</span>
-										<span class="menu-text">Courses</span>
+										<span class="menu-text">Department</span>
 									</a>
 								</li>
 
