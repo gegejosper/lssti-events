@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Role;
 use App\Models\User;
+use Response;
+use Validator;
+use DB;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -67,6 +71,7 @@ class UserController extends Controller
                 'email' => $req->email,
                 'username' => $req->username,
                 'password' => Hash::make($req->password),
+                'usertype' => 'admin',
                 'status' => 'active',
             ]);
             //$roles = DB::table('role_user')->get();

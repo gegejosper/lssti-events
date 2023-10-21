@@ -37,6 +37,7 @@ License: You must have a valid license purchased only from themeforest(the above
 		<link href="{{asset('assets/css/themes/layout/brand/light.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('assets/css/themes/layout/aside/light.css')}}" rel="stylesheet" type="text/css" />
 		<link href="{{asset('assets/css/custom.css')}}" rel="stylesheet" type="text/css" />
+		<script src="{{asset('js/jquery-2.0.3.min.js')}}"></script>
 		<!--end::Layout Themes-->
 		<link rel="shortcut icon" href="{{asset('assets/media/lssti_logo.png')}}" />
 	</head>

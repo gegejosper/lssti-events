@@ -179,11 +179,11 @@
                                         <br>
                                         <div class="checkbox-inline">
                                             @foreach($roles as $role)
-                                                @if($role->name != 'member_agent' && $role->name != 'member_admin' && $role->name != 'member_manager' && $role->name != 'member')
+                                               
                                                 <label class="checkbox">
                                                 <input type="checkbox" class="roles" name="roles" value="{{ $role->id }}" @if($user->roles->pluck('id')->contains($role->id)) checked @endif>
                                                 <span></span>{{$role->name}}</label>
-                                                @endif
+                                          
                                             @endforeach
                                         </div>
                                         <span class="form-text text-muted">Please check the roles you want to assign on the user</span>
