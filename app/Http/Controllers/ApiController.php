@@ -41,6 +41,7 @@ class ApiController extends Controller
         $count_log = Gate_attendance::where('date_log', $date_log)
             ->where('student_id', $id_number)
             ->where('log_count', $log_count)
+            ->where('event', $event_id)
             ->count();
         if($count_log == 0){
             $student = Student::where('id_number', $req->id_number)->first();

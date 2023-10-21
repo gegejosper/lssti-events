@@ -46,6 +46,7 @@ Route::namespace('Panel')->prefix('panel')->name('panel.')->group(function() {
 
         Route::get('/events', 'AdminController@events')->name('events');
         Route::get('/events/{event_id}', 'EventController@view_event')->name('view_event');
+        Route::get('/events/{event_id}/{department}', 'EventController@view_event_by_deparment')->name('view_event_by_deparment');
         Route::post('/event/add', 'EventController@event_add')->name('event_add');
         Route::post('/event/modify', 'EventController@event_modify')->name('event_modify');
         Route::post('/event/update', 'EventController@event_update')->name('event_update');

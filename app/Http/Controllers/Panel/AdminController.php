@@ -199,8 +199,8 @@ class AdminController extends Controller
         return view ('panel.admin.gate-attendance', compact('page_name', 'today', 'students'));
     }
     public function reports(){
-        $page_name = 'Dashboard';
-        $gate_logged = Gate_attendance::with('student', 'event_detail')->latest()->get();
-        return view('panel.admin.reports.log-report',compact('page_name', 'gate_logged'));
+        $page_name = 'Events';
+        $events = Event::orderBy('id', 'desc')->get();
+        return view('panel.admin.reports.log-report',compact('page_name', 'events'));
     }
 }
