@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 20, 2023 at 02:45 PM
+-- Generation Time: Oct 21, 2023 at 05:59 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -502,7 +502,13 @@ INSERT INTO `att_punches` (`id`, `employee_id`, `punch_time`, `workcode`, `works
 (32, 1, '2023-10-20 13:57:06', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
 (33, 1, '2023-10-20 13:57:08', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
 (34, 3, '2023-10-20 13:57:15', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
-(35, 4, '2023-10-20 13:57:17', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0);
+(35, 4, '2023-10-20 13:57:17', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
+(36, 1, '2023-10-20 23:38:49', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
+(37, 3, '2023-10-20 23:38:52', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
+(38, 4, '2023-10-20 23:38:54', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
+(39, 1, '2023-10-20 23:57:46', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
+(40, 3, '2023-10-20 23:57:51', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0),
+(41, 4, '2023-10-20 23:57:53', 0, 0, '1', 1, '0', NULL, NULL, NULL, 0, 0, NULL, 0, 1, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -692,7 +698,16 @@ INSERT INTO `att_terminal_events` (`id`, `occurtime`, `actionname`, `contentdata
 (25, '2023-10-20 13:57:08', 'Identify', NULL, 'FP', 1),
 (26, '2023-10-20 13:57:15', 'Identify', NULL, 'FP', 1),
 (27, '2023-10-20 13:57:17', 'Identify', NULL, 'FP', 1),
-(28, '2023-10-20 20:17:59', NULL, 'Failed To Connect With Device 192.168.100.201', NULL, 1);
+(28, '2023-10-20 20:17:59', NULL, 'Failed To Connect With Device 192.168.100.201', NULL, 1),
+(29, '2023-10-20 23:38:59', NULL, 'Succeeded To Connect With Device 192.168.100.201', NULL, 1),
+(30, '2023-10-20 23:38:49', 'Identify', NULL, 'FP', 1),
+(31, '2023-10-20 23:38:52', 'Identify', NULL, 'FP', 1),
+(32, '2023-10-20 23:39:15', NULL, 'Succeeded To Connect With Device 192.168.100.201', NULL, 1),
+(33, '2023-10-20 23:38:54', 'Identify', NULL, 'FP', 1),
+(34, '2023-10-20 23:57:46', 'Identify', NULL, 'FP', 1),
+(35, '2023-10-20 23:57:51', 'Identify', NULL, 'FP', 1),
+(36, '2023-10-20 23:57:53', 'Identify', NULL, 'FP', 1),
+(37, '2023-10-21 00:23:12', NULL, 'Failed To Connect With Device 192.168.100.201', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -882,7 +897,7 @@ CREATE TABLE `events` (
 --
 
 INSERT INTO `events` (`id`, `event_name`, `event_date`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'CONCERT', '2023-10-18', 'active', '2023-10-18 11:42:06', '2023-10-18 11:42:06'),
+(1, 'CONCERT', '2023-10-18', 'inactive', '2023-10-18 11:42:06', '2023-10-20 15:57:13'),
 (2, 'BASKETBALL', '2023-10-20', 'active', '2023-10-20 06:08:00', '2023-10-20 06:08:00');
 
 -- --------------------------------------------------------
@@ -928,7 +943,13 @@ CREATE TABLE `gate_attendances` (
 INSERT INTO `gate_attendances` (`id`, `student_id`, `course`, `event`, `date_log`, `time_log`, `log_type`, `log_count`, `status`, `created_at`, `updated_at`) VALUES
 (1, '208', 'BSCS', '1', '2023-10-20', '13:57:06', 'login', '0', 'logged in', '2023-10-20 05:57:45', '2023-10-20 05:57:45'),
 (2, '12121', 'BSN', '1', '2023-10-20', '13:57:15', 'login', '0', 'logged in', '2023-10-20 05:57:45', '2023-10-20 05:57:45'),
-(3, '222', 'BSN', '1', '2023-10-20', '13:57:17', 'login', '0', 'logged in', '2023-10-20 05:57:46', '2023-10-20 05:57:46');
+(3, '222', 'BSN', '1', '2023-10-20', '13:57:17', 'login', '0', 'logged in', '2023-10-20 05:57:46', '2023-10-20 05:57:46'),
+(4, '208', 'BSCS', '1', '2023-10-20', '23:38:49', 'logout', '0', 'logged out', '2023-10-20 15:39:15', '2023-10-20 15:39:15'),
+(5, '12121', 'BSN', '1', '2023-10-20', '23:38:52', 'logout', '0', 'logged out', '2023-10-20 15:39:21', '2023-10-20 15:39:21'),
+(6, '222', 'BSN', '1', '2023-10-20', '23:38:54', 'logout', '0', 'logged out', '2023-10-20 15:39:21', '2023-10-20 15:39:21'),
+(7, '208', 'BSCS', '2', '2023-10-20', '23:57:46', 'login', '0', 'logged in', '2023-10-20 15:58:10', '2023-10-20 15:58:10'),
+(8, '12121', 'BSN', '2', '2023-10-20', '23:57:51', 'login', '0', 'logged in', '2023-10-20 15:58:16', '2023-10-20 15:58:16'),
+(9, '222', 'BSN', '2', '2023-10-20', '23:57:53', 'login', '0', 'logged in', '2023-10-20 15:58:22', '2023-10-20 15:58:22');
 
 -- --------------------------------------------------------
 
@@ -1312,7 +1333,7 @@ CREATE TABLE `logtypes` (
 --
 
 INSERT INTO `logtypes` (`id`, `log_type`, `created_at`, `updated_at`) VALUES
-(1, '0', NULL, '2023-10-20 05:57:24');
+(1, '0', NULL, '2023-10-20 15:58:05');
 
 -- --------------------------------------------------------
 
@@ -1735,8 +1756,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '2023-10-11 03:14:23', '2023-10-11 03:14:23'),
-(2, 'student', '2023-10-11 03:14:23', '2023-10-11 03:14:23');
+(1, 'admin', '2023-10-11 03:14:23', '2023-10-11 03:14:23');
 
 -- --------------------------------------------------------
 
@@ -1757,20 +1777,7 @@ CREATE TABLE `role_user` (
 --
 
 INSERT INTO `role_user` (`id`, `role_id`, `user_id`, `created_at`, `updated_at`) VALUES
-(1, 1, 1, '2023-10-11 03:14:24', '2023-10-11 03:14:24'),
-(2, 2, 2, '2023-10-11 03:14:24', '2023-10-11 03:14:24'),
-(3, 1, 1, NULL, NULL),
-(4, 2, 2, NULL, NULL),
-(5, 2, 3, '2023-10-11 03:18:09', '2023-10-11 03:18:09'),
-(6, 2, 3, NULL, NULL),
-(7, 2, 4, '2023-10-20 05:22:21', '2023-10-20 05:22:21'),
-(8, 2, 4, NULL, NULL),
-(9, 2, 5, '2023-10-20 05:22:54', '2023-10-20 05:22:54'),
-(10, 2, 5, NULL, NULL),
-(11, 2, 6, '2023-10-20 05:24:23', '2023-10-20 05:24:23'),
-(12, 2, 6, NULL, NULL),
-(13, 2, 7, '2023-10-20 05:24:45', '2023-10-20 05:24:45'),
-(14, 2, 7, NULL, NULL);
+(1, 1, 1, '2023-10-11 03:14:24', '2023-10-11 03:14:24');
 
 -- --------------------------------------------------------
 
@@ -2379,13 +2386,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `username`, `email_verified_at`, `password`, `status`, `usertype`, `api_token`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'admin@lssti.com', 'admin', NULL, '$2y$10$sT1jP2GEpIE2taBagev5yemLxqslJslwoEWzBmtC.BjsOiGFGF69G', 'active', 'admin', NULL, NULL, '2023-10-11 03:14:24', '2023-10-11 03:14:24'),
-(2, 'student', 'student@lssti.com', 'student', NULL, '$2y$10$WiODpFWLYLvjnm7ccJf24.Otr156TQTOAP3hnSzuK77Jgj1S0kP0.', 'active', 'student', NULL, NULL, '2023-10-11 03:14:24', '2023-10-11 03:14:24'),
-(3, 'SDADS DSADS', '12121@ansh-soa.com', '12121', NULL, '$2y$10$qR1wSDYlVf2db706St8/6u2bIB37j5RzYzP6mpMISxdlo726G45J2', 'active', 'student', NULL, NULL, '2023-10-11 03:18:09', '2023-10-11 03:18:09'),
-(4, 'DSAS SDASDA', '222@ansh-soa.com', '222', NULL, '$2y$10$a9wWsGfJEukOPThr/gEHKeiwzMslUyHTFGLhfZYKPvUcZfOZhFhKO', 'active', 'student', NULL, NULL, '2023-10-20 05:22:21', '2023-10-20 05:22:21'),
-(5, 'FW SSX', '333@ansh-soa.com', '333', NULL, '$2y$10$kD3p2jZMOmF4Z8RPRmgeBeO0FIDmPZ8zMCGllo8DvrFpNR0Fx6qjW', 'active', 'student', NULL, NULL, '2023-10-20 05:22:54', '2023-10-20 05:22:54'),
-(6, 'GGG GFGFF', '1@ansh-soa.com', '1', NULL, '$2y$10$qFZczxDeIj.PoloZqkqS0uuaFAnHAsp.LxpneFzKzrkjzGDeaPBQm', 'active', 'student', NULL, NULL, '2023-10-20 05:24:23', '2023-10-20 05:24:23'),
-(7, 'FGHFGHFH GHFHJGFGH', '208@ansh-soa.com', '208', NULL, '$2y$10$CSYDn2hlyodCnOP7yatufuLKWDXfcV7ih4cVNwTnlcjTQn6CulBnS', 'active', 'student', NULL, NULL, '2023-10-20 05:24:45', '2023-10-20 05:24:45');
+(1, 'admin', 'admin@lssti.com', 'admin', NULL, '$2y$10$sT1jP2GEpIE2taBagev5yemLxqslJslwoEWzBmtC.BjsOiGFGF69G', 'active', 'admin', NULL, NULL, '2023-10-11 03:14:24', '2023-10-11 03:14:24');
 
 -- --------------------------------------------------------
 
@@ -3191,7 +3192,7 @@ ALTER TABLE `att_flexibletimetable`
 -- AUTO_INCREMENT for table `att_punches`
 --
 ALTER TABLE `att_punches`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `att_shift`
@@ -3221,7 +3222,7 @@ ALTER TABLE `att_terminal`
 -- AUTO_INCREMENT for table `att_terminal_events`
 --
 ALTER TABLE `att_terminal_events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `att_timetable`
@@ -3275,7 +3276,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `gate_attendances`
 --
 ALTER TABLE `gate_attendances`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `hr_attendancerule`
@@ -3479,7 +3480,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `role_user`
 --
 ALTER TABLE `role_user`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `rpt_reportentity`
@@ -3557,7 +3558,7 @@ ALTER TABLE `sys_user`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `zkproto_control_queue`

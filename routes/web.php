@@ -32,7 +32,7 @@ Route::namespace('Panel')->prefix('panel')->name('panel.')->group(function() {
         Route::get('/school_year', 'AdminController@school_year')->name('school_year');
         Route::get('/setup', 'AdminController@setup')->name('setup');
         Route::get('/logs', 'AdminController@logs')->name('logs');
-        Route::get('/reports', 'AdminController@reports')->name('logs');
+        Route::get('/reports', 'AdminController@reports')->name('reports');
         Route::post('/setup/save', 'AdminController@save_setup')->name('save_setup');
         Route::post('/setup/save_attendance_setup', 'AdminController@save_attendance_setup')->name('save_attendance_setup');
         Route::post('/school_year/add', 'SchoolYearController@school_year_add')->name('school_year_add');

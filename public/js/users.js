@@ -12,7 +12,7 @@ $(document).ready(function() {
         readURL(this);
     });
     $(document).on('click', '.add-user', function() {
-        console.log('dsads');
+        //console.log('dsads');
         $('#adduserModal').modal('show');
     });
     $(document).on('click', '.closemodify', function() {
@@ -25,13 +25,13 @@ $(document).ready(function() {
         $('#id').val($(this).data('id'));
         $('#user_modify_id').val($(this).data('user_id'));
         $('#user_modify_status').val($(this).data('user_status'));
-        $('#modifyuserModal').modal('show');
+        $('#modifyUserModal').modal('show');
     });
     $('.modal-footer').on('click', '#modifyuser', function() {
   
         $.ajax({
             type: 'post',
-            url: '/panel/accounts/users/modify',
+            url: '/panel/admin/users/modify',
             data: {
                 //_token:$(this).data('token'),
                 '_token': $('input[name=_token]').val(),
@@ -40,9 +40,12 @@ $(document).ready(function() {
                 
             },
             success: function(data) {
-                $('#modifyuserModal').modal('toggle');
-                $('#modifyuserSuccess').modal('show');
-                
+                $('#modifyUserModal').modal('toggle');
+                $('#modifyUserModalSuccess').modal('show');
+                // $('#modify-success').removeClass('alert-danger');
+                // $('#modify-success').addClass('alert-success');
+                // $('#modify-success').text('Successfully updated');
+                // $('.modal-footer').toggle();
             },
             
             error: function(data){
@@ -70,7 +73,7 @@ $(document).ready(function() {
         $('#adduser').attr('disabled','disabled');
             $.ajax({
                 type: 'post',
-                url: '/panel/accounts/users/add',
+                url: '/panel/admin/users/add',
                 data: {
                     '_token': $('input[name=_token]').val(),
                     'name': $('input[name=name]').val(),
