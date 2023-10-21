@@ -59,7 +59,7 @@
                                  @endif
                                 
                                 
-								<form class="form" novalidate="novalidate" id="kt_login_forgot_form" method="POST" action="{{ secure_url('login') }}">
+								<form class="form" novalidate="novalidate" id="kt_login_forgot_form" method="POST" action="{{ url('login') }}">
                                     @csrf
 									<div class="form-group py-3 m-0">
 										<input class="form-control h-auto border-0 px-0 placeholder-dark-75" type="Username" placeholder="Username" name="username" autocomplete="off" />
