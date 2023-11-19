@@ -77,6 +77,36 @@ class StudentController extends Controller
             return response()->json($student_info);
         }
     }
+    public function student_update(Request $req){
+        $validator = Validator::make($req->all(), [
+            'fname' => 'required',
+            'lname' => 'required',
+            'student_id' => 'required',
+            'contact_number' => 'required',
+            'id_number' => 'required',
+            'address' => 'required'
+        ]);
+        if ($validator->fails()) {    
+            return Response::json(array(
+                'success' => false,
+                'errors' => $validator->getMessageBag()->toArray()
+            ), 400); // 400 being the HTTP date for an invalid request.
+            //return response()->json(['errors' => $validator->messages(), 'status' => 422], 200);
+        }
+        else {
+            
+            $data = Student::find($req->student_id);
+            $data->first_name = $req->fname;
+            $data->last_name = $req->lname;
+            $data->id_number = $req->id_number;
+            $data->address = $req->address;
+            $data->contact_number = $req->contact_number;
+            $data->gender = $req->gender;
+            $data->course = $req->course;
+            $data->save();
+            return response()->json($data);
+        }
+    }
     public function students_search_section(Request $request){
         if($request->ajax())
         {   

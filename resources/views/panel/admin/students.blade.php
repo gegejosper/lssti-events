@@ -39,7 +39,7 @@
 												</th>
 												<th>Department</th>
                                                 <th>Contact Number</th>
-                        
+                                                <th>Address</th>
 												<th style="min-width: 100px">Status</th>
 												<th style="min-width: 80px"></th>
 											</tr>
@@ -57,18 +57,19 @@
 												</td>
 												<td>{{$student->course}}</td>
 												<td>{{$student->contact_number}}</td>
-                                                
+                                                <td>{{$student->address}}</td>
                                                 <td>
 													<span class="text-dark-75 font-weight-bolder d-block font-size-lg">{{$student->status}}</span>
 												</td>
 												<td class="pr-0 text-right">
-                                                <a href="/panel/admin/student/{{$student->id}}" class="btn btn-light-success font-weight-bolder font-size-sm btn-sm"><i class="fas fa-search"></i></a>
+                                                <!-- <a href="/panel/admin/student/{{$student->id}}" class="btn btn-light-success font-weight-bolder font-size-sm btn-sm"><i class="fas fa-search"></i></a> -->
 												<a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-student btn-sm"
 													data-student_id="{{$student->id}}"
-													data-fname="{{$student->name}}"
-                                                    data-lname="{{$student->name}}"
-                                                    data-contact_number="{{$student->name}}"
-                                                    data-address="{{$student->name}}"
+                                                    data-id_number="{{$student->id_number}}"
+													data-fname="{{$student->first_name}}"
+                                                    data-lname="{{$student->last_name}}"
+                                                    data-contact_number="{{$student->contact_number}}"
+                                                    data-address="{{$student->address}}"
 												><i class="fas fa-pen"></i></a>
 												@if($student->status == 'active')
                                                 <a href="javascript:;" id="modifystudent{{$student->id}}" class="btn btn-sm btn-warning modify-student btn-sm"
@@ -241,7 +242,16 @@
                 <h4 class="mb-10 font-weight-bold text-dark">Update the Details of the Student</h4>
                     
                     <div class="row">
-                        <div class="col-xl-6">
+                        <div class="col-xl-4">
+                            <!--begin::Input-->
+                            <div class="form-group">
+                                <label>ID #</label>
+                                <input type="text" class="form-control form-control-solid form-control-lg" name="edit_id_number" id="edit_id_number" placeholder="Student ID #" value="" />
+                                <span class="form-text text-muted">Please enter ID #</span>
+                            </div>
+                            <!--end::Input-->
+                        </div>
+                        <div class="col-xl-4">
                             <!--begin::Input-->
                             <div class="form-group">
                                 <label>First Name</label>
@@ -250,7 +260,7 @@
                             </div>
                             <!--end::Input-->
                         </div>
-                        <div class="col-xl-6">
+                        <div class="col-xl-4">
                             <!--begin::Input-->
                             <div class="form-group">
                                 <label>Last Name</label>
@@ -281,6 +291,36 @@
                             </div>
                             <!--end::Input-->
                         </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <!--begin::Input-->
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select name="edit_gender" id="edit_gender" class="form-control form-control-solid">
+                                    <option value="MALE">MALE</option>
+                                    <option value="FEMALE">FEMALE</option>
+                                </select>
+                                <span class="form-text text-muted">Please select gender</span>
+                            </div>
+                            <!--end::Input-->
+                            
+                        </div>
+                        <div class="col-xl-6">
+                            <!--begin::Input-->
+                            <div class="form-group">
+                                <label>Course</label>
+                                <select name="edit_course" id="edit_course" class="form-control form-control-solid" required>
+                                    @foreach($courses as $course)
+                                        <option value="{{$course->course_code}}">{{$course->course_name}}</option>
+                                    @endforeach
+                                </select>
+                                <span class="form-text text-muted">Please select course</span>
+                            </div>
+                            <!--end::Input-->
+                            
+                        </div>
+                    
                     </div>
                 </div>
             </div>

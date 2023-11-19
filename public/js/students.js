@@ -45,6 +45,7 @@ $(document).ready(function() {
     });
 
     $(document).on('click', '.edit-student', function() {
+        $('#edit_id_number').val($(this).data('id_number'));
         $('#edit_fname').val($(this).data('fname'));
         $('#edit_lname').val($(this).data('lname'));
         $('#edit_contact_number').val($(this).data('contact_number'));
@@ -61,16 +62,20 @@ $(document).ready(function() {
                   //_token:$(this).data('token'),
                   '_token': $('input[name=_token]').val(),
                   'fname': $('input[name=edit_fname]').val(),
-                  'lname': $('select[name=edit_lname]').val(),
+                  'lname': $('input[name=edit_lname]').val(),
                   'contact_number': $('input[name=edit_contact_number]').val(),
-                  'address': $('select[name=edit_address]').val(),
-                  'student_id': $('input[name=edit_student_id]').val()
+                  'address': $('input[name=edit_address]').val(),
+                  'student_id': $('input[name=edit_student_id]').val(),
+                  'id_number': $('input[name=edit_id_number]').val(),
+                  'gender': $('select[name=edit_gender]').val(),
+                  'course': $('select[name=edit_course]').val(),
               },
               success: function(data) {
                 $('#editStudentModal').modal('toggle');
                 
                 $('.row'+ data.id).replaceWith(`
                 <tr class="row${data.id}">
+                    <td>${data.id_number}</td>
                     <td class="py-8">
                         <div class="d-flex align-items-center">
                             <div>
@@ -79,15 +84,18 @@ $(document).ready(function() {
                         </div>
                     </td>
                     <td>${data.course}</td>
+                    <td>${data.contact_number}</td>
                     <td>${data.address}</td>
                     <td>
                         <strong>${data.status}</strong>
                     </td>
                     <td class="pr-0 text-right">
+                   
                     <a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-student"
                         data-student_id="${data.id}"
-                        data-fname="${data.fname}"
-                        data-lname="${data.lname}"
+                        data-id_number="${data.id_number}"
+                        data-fname="${data.first_name}"
+                        data-lname="${data.last_name}"
                         data-contact_number="${data.contact_number}"
                         data-address="${data.address}"
                     ><i class="fas fa-pen"></i></a>
