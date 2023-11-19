@@ -13,7 +13,7 @@ class FrontController extends Controller
 {
     //
 
-    protected $url = 'http://lsstievents.com';
+    protected $url = 'http://lssti-events.com';
 
     public function index(){
         $event = Event::where('status', 'active')->first();
