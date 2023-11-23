@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Course;
 use App\Models\Gate_attendance;
+use Carbon\Carbon;
 use Response;
 use Validator;
 
@@ -77,7 +78,9 @@ class EventController extends Controller
         foreach ($gate_logs as $log) {
             $student_id = $log->student_id;
             $log_type = $log->log_type;
-            $time_log = $log->time_log;
+            $carbonTime = Carbon::createFromFormat('H:i:s',  $log->time_log);
+            $time_log = $carbonTime->format('h:i A');
+            //dd($time_log);
 
             if (!isset($log_data[$student_id])) {
                 $log_data[$student_id] = [
@@ -113,12 +116,12 @@ class EventController extends Controller
 
         // Organize the data into an associative array
         $log_data = [];
-
+       
         foreach ($gate_logs as $log) {
             $student_id = $log->student_id;
             $log_type = $log->log_type;
-            $time_log = $log->time_log;
-
+            $carbonTime = Carbon::createFromFormat('H:i:s',  $log->time_log);
+            $time_log = $carbonTime->format('h:i A');
             if (!isset($log_data[$student_id])) {
                 $log_data[$student_id] = [
                     'student' => $log->student,
