@@ -53,26 +53,26 @@ class StudentController extends Controller
             $student_info->user_id = 0;
             $student_info->save();
 
-            $student_role = Role::where('name', 'student')->first();
-            $student = User::create([
-                'name' => strtoupper($req->first_name).' '.strtoupper($req->last_name),
-                'username' => $req->id_number,
-                'email' => $req->id_number.'@ansh-soa.com',
-                'password' => Hash::make('password'),
-                'status' => 'active',
-                'usertype' => 'student'
-            ]);
-            $insert_role_student = Role_user::create([
-                'role_id' => $student_role->id,
-                'user_id' => $student->id
-            ]);
+            // $student_role = Role::where('name', 'student')->first();
+            // $student = User::create([
+            //     'name' => strtoupper($req->first_name).' '.strtoupper($req->last_name),
+            //     'username' => $req->id_number,
+            //     'email' => $req->id_number.'@ansh-soa.com',
+            //     'password' => Hash::make('password'),
+            //     'status' => 'active',
+            //     'usertype' => 'student'
+            // ]);
+            // $insert_role_student = Role_user::create([
+            //     'role_id' => $student_role->id,
+            //     'user_id' => $student->id
+            // ]);
 
-            $data = Student::find($student_info->id);
-            $data->user_id = $student->id;
+            // $data = Student::find($student_info->id);
+            // $data->user_id = $student->id;
             
-            $data->save();
+            // $data->save();
             
-            $student->roles()->attach($student_role);
+            // $student->roles()->attach($student_role);
             //dd($student);
             return response()->json($student_info);
         }

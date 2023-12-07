@@ -179,14 +179,13 @@ $(document).ready(function() {
                         </td>
                         <td>${data.course}</td>
                         <td>${data.contact_number}</td>
-                        
+                        <td>${data.address}</td>
                         <td>
                             <span class="text-dark-75 font-weight-bolder d-block font-size-lg">${data.status}</span>
                             
                         </td>
                         
                         <td class="pr-0 text-right">
-                            <a href="/panel/admin/student/${data.id}" class="btn btn-light-success font-weight-bolder font-size-sm btn-sm"><i class="fas fa-search"></i></a>
                         <a href="javascript:;" class="btn btn-light-warning font-weight-bolder font-size-sm edit-student btn-sm"
                             data-student_id="${data.id}"
                             data-student="${data.name}"
