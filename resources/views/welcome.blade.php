@@ -61,9 +61,17 @@
 					<div class="d-flex justify-content-center pt-20">
 						<div class="d-flex flex-column justify-content-center text-center">
                             <h1 class="text-white" style="font-size:30px;">LSSTI | Student Event Attendance with Biometric System</h1>
-                            <h2 class="text-white mt-10">
-                                EVENT : {{$event->event_name}}
-                            </h2>
+                            
+                            <div class="row justify-content-center">
+                                <div class="col col-lg-4">
+                                    <div class="card" >
+                                        <div class="card-body">
+										
+										<h4 class="text-black">
+											EVENT
+										</h4>
+										<h2 class="text-black">{{$event->event_name}}
+										</h2>
                             @if(session('success'))
                                 <div class="alert alert-success" role="alert">
                                     {{ session('success') }}     
@@ -85,22 +93,19 @@
                                 }
                                 @endphp
                                 <br>
-                                <h3>LOG TYPE:  {{$log_type}}</h2>
+                                <h3 class="text-danger">LOG TYPE:  {{$log_type}}</h2>
                             </div>
-                            <div class="row justify-content-center">
-                                <div class="col col-lg-4">
-                                    <div class="card" >
-                                        <div class="card-body">
                                             @if($logtype->log_type == 1)
                                             <a href="/update/log/0" class="btn btn-info">Login</a>
                                             @else
                                             <a href="/update/log/1" class="btn btn-success">Logout</a>
                                             @endif
                                         </div>
+										<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+                           
 						</div>
 					</div>
 					<!--end::Content body-->
