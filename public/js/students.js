@@ -86,6 +86,8 @@ $(document).ready(function() {
                         </div>
                     </td>
                     <td>${data.course}</td>
+                    <td>${data.year}</td>
+                    <td>${data.block}</td>
                     <td>${data.contact_number}</td>
                     <td>${data.address}</td>
                     <td>
@@ -182,6 +184,8 @@ $(document).ready(function() {
                             </div>
                         </td>
                         <td>${data.course}</td>
+                        <td>${data.year}</td>
+                        <td>${data.block}</td>
                         <td>${data.contact_number}</td>
                         <td>${data.address}</td>
                         <td>

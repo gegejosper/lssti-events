@@ -38,6 +38,8 @@
 													<span class="text-dark-75">Name</span>
 												</th>
 												<th>Department</th>
+                                                <th>Year</th>
+                                                <th>Block</th>
                                                 <th>Contact Number</th>
                                                 <th>Address</th>
 												<th style="min-width: 100px">Status</th>
@@ -56,6 +58,8 @@
 													</div>
 												</td>
 												<td>{{$student->course}}</td>
+                                                <td>{{$student->year}}</td>
+                                                <td>{{$student->block}}</td>
 												<td>{{$student->contact_number}}</td>
                                                 <td>{{$student->address}}</td>
                                                 <td>
