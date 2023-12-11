@@ -33,6 +33,7 @@ Route::namespace('Panel')->prefix('panel')->name('panel.')->group(function() {
         Route::get('/setup', 'AdminController@setup')->name('setup');
         Route::get('/logs', 'AdminController@logs')->name('logs');
         Route::get('/reports', 'AdminController@reports')->name('reports');
+        Route::post('/reports/filter', 'AdminController@filter_report')->name('filter_report');
         Route::post('/setup/save', 'AdminController@save_setup')->name('save_setup');
         Route::post('/setup/save_attendance_setup', 'AdminController@save_attendance_setup')->name('save_attendance_setup');
         Route::post('/school_year/add', 'SchoolYearController@school_year_add')->name('school_year_add');

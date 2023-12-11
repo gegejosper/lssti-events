@@ -49,6 +49,8 @@ class StudentController extends Controller
             $student_info->address = $req->address;
             $student_info->gender =$req->gender;
             $student_info->course = $req->course;
+            $student_info->year = $req->year;
+            $student_info->block = $req->block;
             $student_info->status ='active';
             $student_info->user_id = 0;
             $student_info->save();
@@ -103,6 +105,8 @@ class StudentController extends Controller
             $data->contact_number = $req->contact_number;
             $data->gender = $req->gender;
             $data->course = $req->course;
+            $data->year = $req->year;
+            $data->block = $req->block;
             $data->save();
             return response()->json($data);
         }

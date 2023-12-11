@@ -184,7 +184,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-xl-6">
+                                <div class="col-xl-3">
                                     <!--begin::Input-->
                                     <div class="form-group">
                                         <label>Gender</label>
@@ -197,7 +197,7 @@
                                     <!--end::Input-->
                                     
                                 </div>
-                                <div class="col-xl-6">
+                                <div class="col-xl-3">
                                     <!--begin::Input-->
                                     <div class="form-group">
                                         <label>Course</label>
@@ -212,14 +212,53 @@
                                     <!--end::Input-->
                                     
                                 </div>
-                            
+                                <div class="col-xl-3">
+                                    <!--begin::Input-->
+                                    <div class="form-group">
+                                        <label>Year</label>
+                                        <select name="edit_year" id="edit_year" class="form-control form-control-solid" required>
+                                            <option value="1st Year">1st Year</option>
+                                            <option value="2nd Year">2nd Year</option>
+                                            <option value="3rd Year">3rd Year</option>
+                                            <option value="4th Year">4th Year</option>
+                                        </select>
+                                        <span class="form-text text-muted">Please select course</span>
+                                        
+                                    </div>
+                                    <!--end::Input-->
+                                    
+                                </div>
+                                <div class="col-xl-3">
+                                    <!--begin::Input-->
+                                    <div class="form-group">
+                                        <label>Block</label>
+                                        <select name="edit_block" id="edit_block" class="form-control form-control-solid" required>
+                                            <option value="Block A">Block A</option>
+                                            <option value="Block B">Block B</option>
+                                            <option value="Block C">Block C</option>
+                                            <option value="Block D">Block D</option>
+                                            <option value="Block E">Block E</option>
+                                            <option value="Block F">Block F</option>
+                                            <option value="Block G">Block G</option>
+                                            <option value="Block H">Block H</option>
+                                            <option value="Block I">Block I</option>
+                                            <option value="Block J">Block J</option>
+                                            <option value="Block K">Block K</option>
+                                            <option value="Block L">Block L</option>
+                                            <option value="Block M">Block M</option>
+                                            <option value="Block N">Block N</option>
+                                        </select>
+                                        <span class="form-text text-muted">Please select course</span>
+                                    </div>
+                                    <!--end::Input-->
+                        
+                                </div>
                             </div>
                         </div>
-                
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-light-warning btn-sm font-weight-bold" data-dismiss="modal"> <i class=" fas fa-times"></i> Cancel</button>
-                    <button type="submit" class="btn btn-primary btn-sm font-weight-bold"> <i class=" fas fa-save"></i> Save</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light-warning btn-sm font-weight-bold" data-dismiss="modal"> <i class=" fas fa-times"></i> Cancel</button>
+                        <button type="submit" class="btn btn-primary btn-sm font-weight-bold"> <i class=" fas fa-save"></i> Save</button>
+                    </div>
                 </div>
             </form>
         </div>
@@ -239,7 +278,7 @@
                 <div class="errors"></div>
                 <div class="card-body p-0">
                     
-                <h4 class="mb-10 font-weight-bold text-dark">Update the Details of the Student</h4>
+                    <h4 class="mb-10 font-weight-bold text-dark">Update the Details of the Student</h4>
                     
                     <div class="row">
                         <div class="col-xl-4">
@@ -293,7 +332,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xl-6">
+                        <div class="col-xl-3">
                             <!--begin::Input-->
                             <div class="form-group">
                                 <label>Gender</label>
@@ -306,7 +345,7 @@
                             <!--end::Input-->
                             
                         </div>
-                        <div class="col-xl-6">
+                        <div class="col-xl-3">
                             <!--begin::Input-->
                             <div class="form-group">
                                 <label>Course</label>
@@ -320,12 +359,52 @@
                             <!--end::Input-->
                             
                         </div>
-                    
+                        <div class="col-xl-3">
+                            <!--begin::Input-->
+                            <div class="form-group">
+                                <label>Year</label>
+                                <select name="edit_year" id="edit_year" class="form-control form-control-solid" required>
+                                    <option value="1st Year">1st Year</option>
+                                    <option value="2nd Year">2nd Year</option>
+                                    <option value="3rd Year">3rd Year</option>
+                                    <option value="4th Year">4th Year</option>
+                                </select>
+                                <span class="form-text text-muted">Please select course</span>
+                            </div>
+                            <!--end::Input-->
+                            
+                        </div>
+                        <div class="col-xl-3">
+                            <!--begin::Input-->
+                            <div class="form-group">
+                                <label>Block</label>
+                                <select name="edit_block" id="edit_block" class="form-control form-control-solid" required>
+                                     <option value="Block A">Block A</option>
+                                     <option value="Block B">Block B</option>
+                                     <option value="Block C">Block C</option>
+                                     <option value="Block D">Block D</option>
+                                     <option value="Block E">Block E</option>
+                                     <option value="Block F">Block F</option>
+                                     <option value="Block G">Block G</option>
+                                     <option value="Block H">Block H</option>
+                                     <option value="Block I">Block I</option>
+                                     <option value="Block J">Block J</option>
+                                     <option value="Block K">Block K</option>
+                                     <option value="Block L">Block L</option>
+                                     <option value="Block M">Block M</option>
+                                     <option value="Block N">Block N</option>
+                                </select>
+                                <span class="form-text text-muted">Please select course</span>
+                            </div>
+                            <!--end::Input-->
+                            
+                        </div>
+
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-            <input type="hidden" class="form-control" name="edit_student_id" id="edit_student_id">
+                <input type="hidden" class="form-control" name="edit_student_id" id="edit_student_id">
                 <button type="button" class="btn btn-light-warning btn-sm font-weight-bold" data-dismiss="modal"> <i class=" fas fa-times"></i> Cancel</button>
                 <button type="button" class="btn btn-success btn-sm font-weight-bold" id="editStudent"> <i class=" fas fa-save"></i> Update</button>
             </div>

@@ -48,6 +48,8 @@ class ApiController extends Controller
             $attendance = new Gate_attendance();
             $attendance->student_id = $req->id_number;
             $attendance->course = $student->course;
+            $attendance->year = $student->year;
+            $attendance->block = $student->block;
             $attendance->event = $event_id;
             $attendance->date_log = $date_log;
             $attendance->time_log = $time_log;

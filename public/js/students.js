@@ -69,6 +69,8 @@ $(document).ready(function() {
                   'id_number': $('input[name=edit_id_number]').val(),
                   'gender': $('select[name=edit_gender]').val(),
                   'course': $('select[name=edit_course]').val(),
+                  'block': $('select[name=edit_block]').val(),
+                  'year': $('select[name=edit_year]').val(),
               },
               success: function(data) {
                 $('#editStudentModal').modal('toggle');
@@ -158,7 +160,9 @@ $(document).ready(function() {
                   'course': $('select[name=course]').val(),
                   'gender': $('select[name=gender]').val(),
                   'contact_number': $('input[name=contact_number]').val(),
-                  'address': $('input[name=address]').val()
+                  'address': $('input[name=address]').val(),
+                  'block': $('select[name=block]').val(),
+                  'year': $('select[name=year]').val(),
               },
               success: function(data) {
                 $('#studentTable').prepend(`

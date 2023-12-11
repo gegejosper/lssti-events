@@ -87,6 +87,8 @@ class EventController extends Controller
                     'student' => $log->student,
                     'date_log' => $log->date_log,
                     'course' => $log->course,
+                    'year' => $log->year ? $log->year : null,
+                    'block' => $log->block ? $log->block : null,
                     'event' => $log->event_detail,
                     'login_time' => null,
                     'logout_time' => null,

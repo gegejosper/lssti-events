@@ -203,4 +203,51 @@ class AdminController extends Controller
         $events = Event::orderBy('id', 'desc')->get();
         return view('panel.admin.reports.log-report',compact('page_name', 'events'));
     }
+    public function filter_report(Request $req){
+        $page_name = 'Event Report';
+        $departments = Course::get();
+        //$gate_logged = Gate_attendance::with('student', 'event_detail')->latest()->get();
+        $event = Event::find($req->event_id);
+        $gate_logs = Gate_attendance::where('course', $req->department)
+        ->where('block', $req->block)
+        ->where('year', $req->year)
+        ->where('event', $req->event_id)->with('student', 'event_detail')
+        ->whereIn('log_type', ['login', 'logout'])
+        ->latest()
+        ->get();
+
+        // Organize the data into an associative array
+        $log_data = [];
+        if($gate_logs->count() != 0){
+            foreach ($gate_logs as $log) {
+                $student_id = $log->student_id;
+                $log_type = $log->log_type;
+                $carbonTime = Carbon::createFromFormat('H:i:s',  $log->time_log);
+                $time_log = $carbonTime->format('h:i A');
+                if (!isset($log_data[$student_id])) {
+                    $log_data[$student_id] = [
+                        'student' => $log->student,
+                        'date_log' => $log->date_log,
+                        'course' => $log->course,
+                        'year' => $log->year ? $log->year : null,
+                        'block' => $log->block ? $log->block : null,
+                        'event' => $log->event_detail,
+                        'login_time' => null,
+                        'logout_time' => null,
+                       
+                    ];
+                }
+    
+                if ($log_type === 'login') {
+                    $log_data[$student_id]['login_time'] = $time_log;
+                } elseif ($log_type === 'logout') {
+                    $log_data[$student_id]['logout_time'] = $time_log;
+                }
+            }
+        }
+       
+        //dd($gate_logs->count());
+        return view('panel.admin.reports.event',compact('page_name', 'log_data', 'event', 'departments'));
+        
+    }
 }
